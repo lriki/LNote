@@ -18,10 +18,11 @@
 	if strsize != -1 : return 2
 	return 0
 
-// LAudio_Init
-#deffunc _LAudio_Init
+// LNote_InitAudio
+#deffunc _LNote_InitAudio
+	//LException_SetEnableWrappedException@ 1
 	_LConfig_SetUserWindowHandle@ hwnd
-	__LAudio_Init@
+	__LNote_InitAudio@
 	return
 
 // LAudio_PlayBGM

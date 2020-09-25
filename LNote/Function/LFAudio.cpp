@@ -217,7 +217,7 @@ LNOTE_FUNC_NAMESPACE_BEGIN
     //---------------------------------------------------------------------
 	//
     //---------------------------------------------------------------------
-    LNHandle LSound_Load( const TCHAR* filename, bool enable_3d, LNSoundPlayType play_type )
+    LNHandle LSound_Create( const TCHAR* filename, bool enable_3d, LNSoundPlayType play_type )
     {
         Core::Audio::ISound* sound = NULL;
         LN_FUNC_CALL_RETURN_0( 
@@ -248,9 +248,9 @@ LNOTE_FUNC_NAMESPACE_BEGIN
     //---------------------------------------------------------------------
 	//
     //---------------------------------------------------------------------
-    HRESULT LSound_LoadToPtr( LNHandle* out_handle, const TCHAR* filename, bool enable_3d, LNSoundPlayType play_type )
+    HRESULT LSound_CreateToPtr( LNHandle* out_handle, const TCHAR* filename, bool enable_3d, LNSoundPlayType play_type )
     {
-        *out_handle = LSound_Load( filename, enable_3d, play_type );
+        *out_handle = LSound_Create( filename, enable_3d, play_type );
         return Manager::getLastErrorCode();
     }
 

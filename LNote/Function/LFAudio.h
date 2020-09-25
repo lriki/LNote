@@ -268,7 +268,7 @@ LNOTE_FUNC_NAMESPACE_BEGIN
     //  @return     サウンドハンドル
     //*/
     //---------------------------------------------------------------------[{hsp disable},{ruby a=1 b=2}]
-    LNHandle LSound_Load( const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
+    LNHandle LSound_Create( const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
 
     //---------------------------------------------------------------------
 	///**
@@ -290,8 +290,8 @@ LNOTE_FUNC_NAMESPACE_BEGIN
     //  @param[in]  play_type   : 音声の再生方法
     //  @return     リザルトコード
     //*/
-    //---------------------------------------------------------------------[{hsp name=LSound_Load}]
-    HRESULT LSound_LoadToPtr( LNHandle* out_handle, const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
+    //---------------------------------------------------------------------[{hsp name=LSound_Create}]
+    HRESULT LSound_CreateToPtr( LNHandle* out_handle, const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
 
     //---------------------------------------------------------------------
 	///**

@@ -45,8 +45,8 @@ L3DSoundListener_SetDirection
 L3DSoundListener_SetUpDirection
 L3DSoundListener_Velocity
 
-LSound_Load
-LSound_LoadToPtr
+LSound_Create
+LSound_CreateToPtr
 LSound_CreateMem
 LSound_Release
 LSound_SetVolume

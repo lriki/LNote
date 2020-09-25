@@ -27,6 +27,7 @@ $replace_type = [
   ["float",     "float"],
   ["bool",      "int"],
   ["lnChar*",   "str"],
+  ["TCHAR*",    "str"],
   ["void*",     "var"],
   ["LNHandle*", "var"],   # 上から順に include? で判定しているので、* のあるものを先にしておく
   ["LNHandle",  "int"],

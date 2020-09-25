@@ -30,27 +30,27 @@
 //-----------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------
-#func __LAudio_PlayBGM "LAudio_PlayBGM" int, int, int, int
+#func __LAudio_PlayBGM "LAudio_PlayBGM" str, int, int, int
 #define LAudio_PlayBGM(%1, %2=100, %3=100, %4=0) _LAudio_PlayBGM %1, %2, %3, %4
 #func  _LAudio_PlayBGMMem "LAudio_PlayBGMMem" var, int, int, int, int
 #define LAudio_PlayBGMMem(%1, %2, %3=100, %4=100, %5=0) _LAudio_PlayBGMMem %1, %2, %3, %4, %5
 #func  _LAudio_StopBGM "LAudio_StopBGM" int
 #define LAudio_StopBGM(%1=0) _LAudio_StopBGM %1
-#func __LAudio_PlayBGS "LAudio_PlayBGS" int, int, int, int
+#func __LAudio_PlayBGS "LAudio_PlayBGS" str, int, int, int
 #define LAudio_PlayBGS(%1, %2=100, %3=100, %4=0) _LAudio_PlayBGS %1, %2, %3, %4
 #func  _LAudio_PlayBGSMem "LAudio_PlayBGSMem" var, int, int, int, int
 #define LAudio_PlayBGSMem(%1, %2, %3=100, %4=100, %5=0) _LAudio_PlayBGSMem %1, %2, %3, %4, %5
 #func  _LAudio_StopBGS "LAudio_StopBGS" int
 #define LAudio_StopBGS(%1=0) _LAudio_StopBGS %1
-#func __LAudio_PlayME "LAudio_PlayME" int, int, int
+#func __LAudio_PlayME "LAudio_PlayME" str, int, int
 #define LAudio_PlayME(%1, %2=100, %3=100) _LAudio_PlayME %1, %2, %3
 #func  _LAudio_PlayMEMem "LAudio_PlayMEMem" var, int, int, int
 #define LAudio_PlayMEMem(%1, %2, %3=100, %4=100) _LAudio_PlayMEMem %1, %2, %3, %4
 #func  _LAudio_StopME "LAudio_StopME"
 #define LAudio_StopME _LAudio_StopME
-#func __LAudio_PlaySE "LAudio_PlaySE" int, int, int
+#func __LAudio_PlaySE "LAudio_PlaySE" str, int, int
 #define LAudio_PlaySE(%1, %2=100, %3=100) _LAudio_PlaySE %1, %2, %3
-#func __LAudio_PlaySE3D "LAudio_PlaySE3D" int, float, float, float, float, int, int
+#func __LAudio_PlaySE3D "LAudio_PlaySE3D" str, float, float, float, float, int, int
 #define LAudio_PlaySE3D(%1, %2, %3, %4, %5, %6=100, %7=100) _LAudio_PlaySE3D %1, %2, %3, %4, %5, %6, %7
 #func  _LAudio_PlaySEMem "LAudio_PlaySEMem" var, int, int, int
 #define LAudio_PlaySEMem(%1, %2, %3=100, %4=100) _LAudio_PlaySEMem %1, %2, %3, %4
@@ -70,8 +70,8 @@
 #define L3DSoundListener_Velocity(%1, %2, %3) _L3DSoundListener_Velocity %1, %2, %3
 #func  _LSound_CreateMem "LSound_CreateMem" var, int, int
 #define LSound_CreateMem(%1, %2, %3=false) _LSound_CreateMem %1, %2, %3
-#func  _LSound_Load "LSound_LoadToPtr" var, int, int, int
-#define LSound_Load(%1, %2, %3=false, %4=LN_SOUNDPLAYTYPE_AUTO) _LSound_Load %1, %2, %3, %4
+#func  _LSound_Create "LSound_CreateToPtr" var, str, int, int
+#define LSound_Create(%1, %2, %3=false, %4=LN_SOUNDPLAYTYPE_AUTO) _LSound_Create %1, %2, %3, %4
 #func  _LSound_Release "LSound_Release" int
 #define LSound_Release(%1) _LSound_Release %1
 #func  _LSound_SetVolume "LSound_SetVolume" int, int
@@ -161,10 +161,11 @@
 	if strsize != -1 : return 2
 	return 0
 
-// LAudio_Init
-#deffunc _LAudio_Init
+// LNote_InitAudio
+#deffunc _LNote_InitAudio
+	//LException_SetEnableWrappedException@ 1
 	_LConfig_SetUserWindowHandle@ hwnd
-	__LAudio_Init@
+	__LNote_InitAudio@
 	return
 
 // LAudio_PlayBGM
