@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header">
+      <UniqueIdentifier>{70738256-5707-4813-9c79-e9ea14edbbb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document">
+      <UniqueIdentifier>{6f149ca0-e045-4425-89ad-5c12983e584d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Document\CommonManual">
+      <UniqueIdentifier>{bf6efe26-455e-4242-a7fc-64e0bb7ad09f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\link.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\lnote.h">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\lnote.hpp">
+      <Filter>Header</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\install_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\intro_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\license_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\mainpage.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\modules_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\modules_1_audio_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\modules_1_error_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\modules_1_fileio_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\namespace.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\reference_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\samples_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\samples_1_cpp_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\startup_1_cpp_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Document\CommonManual\tools_1.h">
+      <Filter>Document\CommonManual</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="TestFW.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\LNote\Document\非公開メモ\MME相違点.txt">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="..\..\LNote\Document\非公開メモ\Note.txt">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="..\..\LNote\Document\非公開メモ\ToDo.txt">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="..\..\LNote\Document\非公開メモ\ゲームエンジンめも.txt">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="..\..\LNote\Document\非公開メモ\コーディングとか哲学とか.txt">
+      <Filter>Document</Filter>
+    </None>
+    <None Include="..\..\LNote\Document\非公開メモ\不具合.txt">
+      <Filter>Document</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="Test.cpp" />
+  </ItemGroup>
+</Project>

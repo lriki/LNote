@@ -1,0 +1,616 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{36A66BBF-04C6-4D00-8C63-E14446122701}</ProjectGuid>
+    <RootNamespace>StaticLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\LNote\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(SolutionDir)..\LNote\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\LNote\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;..\..\DTHeader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(SolutionName)_static_d.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_static_d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;..\..\DTHeader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;LNOTE_ENABLE_CRT_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(SolutionName)_static_d.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_static_d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_static.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;..\..\DTHeader;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;LN_CLR_DLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_static.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\Core\Game\Component\VisualModelComponent.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameObjectManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Math\Asm.h" />
+    <ClInclude Include="..\..\LNote\Core\Math\Enum.h" />
+    <ClInclude Include="..\..\LNote\Core\Math\Math.h" />
+    <ClInclude Include="..\..\LNote\Core\Math\Random.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\BoolArray.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Cache.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\CommandLineArguments.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Delegate.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Error.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Exception.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Foreach.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Hash.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\HierarchyNode.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\LogFile.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\MemoryManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Misc.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\RefClass.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\RefClassTemplate.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\ReferenceObject.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\RefPtr.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\RefString.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\SharingKey.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\STLUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\String.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\StringUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\TChar.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Time.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Container\List.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Container\Map.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Container\NodeList.h" />
+    <ClInclude Include="..\..\LNote\Core\Base\Container\Stack.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\Atomic.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\Barrier.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\EventFlag.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\Mutex.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\ReadWriteMutex.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\Semaphore.h" />
+    <ClInclude Include="..\..\LNote\Core\Thread\Thread.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Event.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\System\OS.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Common\ApplicationBase.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Common\PerfStopwatch.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Common\WindowBase.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Win32\Application.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Win32\DummyWindow.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Win32\SystemUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Win32\Window.h" />
+    <ClInclude Include="..\..\LNote\Core\System\X11\Application.h" />
+    <ClInclude Include="..\..\LNote\Core\System\X11\Window.h" />
+    <ClInclude Include="..\..\LNote\Core\System\X11\X11SystemUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Android\AndroidApplication.h" />
+    <ClInclude Include="..\..\LNote\Core\System\Android\AndroidWindow.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\BitmapTextRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Common.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\DebugText.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\GeometryRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Gizmo.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\GraphicsUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Grid.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\PointParticle.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\PointParticleParameter.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\RenderState.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\RingRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\SpriteRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Types.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\VertexTypes.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ConvertBlendedMesh.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Model.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelConstraint.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelCore.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelFace.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelFrame.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelIK.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelRigidBody.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Motion.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\MotionController.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\PMDTypes.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\AllocateHierarchy.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Image\Image.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Image\PngImage.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Canvas.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\DX9Module.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\GraphicsDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\IndexBuffer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Renderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Shader.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Texture.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\VertexBuffer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\FontManagerBase.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\Win32\Win32Font.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\Win32\Win32FontManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLCanvas.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLGraphicsDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLIndexBuffer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLPlatformContext.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLShader.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLShaderManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLTexture.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLVertexBuffer.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL.h" />
+    <ClInclude Include="..\..\LNote\Core\Framework\ConfigData.h" />
+    <ClInclude Include="..\..\LNote\Core\Framework\Framework.h" />
+    <ClInclude Include="..\..\LNote\Core\Framework\Types.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Collision.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Common.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\DrawingShapes.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Geometry.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Matrix.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Quaternion.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\SQTTransform.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector2.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector3.h" />
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector4.h" />
+    <ClInclude Include="..\..\LNote\Core\File\Archive.h" />
+    <ClInclude Include="..\..\LNote\Core\File\ArchiveMaker.h" />
+    <ClInclude Include="..\..\LNote\Core\File\ASyncProcessObject.h" />
+    <ClInclude Include="..\..\LNote\Core\File\FileUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\File\InFile.h" />
+    <ClInclude Include="..\..\LNote\Core\File\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\File\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\File\OutFile.h" />
+    <ClInclude Include="..\..\LNote\Core\File\StreamObject.h" />
+    <ClInclude Include="..\..\LNote\Core\Resource\LNResource.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\GameAudio.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Sound.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioResourceManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioSource.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioUtil.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\DirectMusic.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioPlayer.h" />
+    <ClInclude Include="..\..\LNote\Core\Animation\FadeValue.h" />
+    <ClInclude Include="..\..\LNote\Core\Animation\FixedLengthScalar.h" />
+    <ClInclude Include="..\..\LNote\Core\Animation\ModelMotion.h" />
+    <ClInclude Include="..\..\LNote\Core\Animation\Scalar.h" />
+    <ClInclude Include="..\..\LNote\Core\Animation\Types.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\GameController.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Interface.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Joypad.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Keyboard.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Mouse.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Touch.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\InputDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\JoypadDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\XInputModule.h" />
+    <ClInclude Include="..\..\LNote\Core\Input\Android\AndroidInputDevice.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\BodyBase.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\IDebugRenderer.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\Types.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\Box.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\Plane.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\RigidBody.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\TriangleMesh.h" />
+    <ClInclude Include="..\..\LNote\Core\Physics\Joint\JointBase.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\Common.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\FPSController.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameObject.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameScene.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameSceneManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameTime.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\Component\GameComponent.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\Component\ModelComponent.h" />
+    <ClInclude Include="..\..\LNote\Function\FuncLibManager.h" />
+    <ClInclude Include="..\..\LNote\Function\LFAudio.h" />
+    <ClInclude Include="..\..\LNote\Function\LFCommon.h" />
+    <ClInclude Include="..\..\LNote\Function\LFFile.h" />
+    <ClInclude Include="..\..\LNote\Function\LFFramework.h" />
+    <ClInclude Include="..\..\LNote\Function\LFGraphics.h" />
+    <ClInclude Include="..\..\LNote\Function\LFStdAfx.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\Common.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\DrawCommand.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneGraph.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\_Tempalte.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\BatchSprite.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Camera.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\DummyNode.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Effect.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Grid.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Light.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Model.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\NodeRenderParam.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Pane.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\PointParticle.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Proxy.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\SceneNode.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Sprite.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Sprite3D.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Terrain.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Tilemap.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Util.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Viewport.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\MMETypes.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\OffscreenScene.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShader.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderTechnique.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Types.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\EmitterBase.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\RingEmitter.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\Sprite3DEmitter.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\SpriteEmitter.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrack.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrackGroup.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectCore.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectMasterAnimationTrack.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectNodeCore.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectInstance.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstance.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceContainer.h" />
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceGroup.h" />
+    <ClInclude Include="..\..\LNote\Core\Task\ITaskExecuteHandler.h" />
+    <ClInclude Include="..\..\LNote\Core\Task\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\Task\Task.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Common.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\GUIElement.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\GUIEvent.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Manager.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIButton.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIContentControl.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIControl.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIDesktop.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUILabel.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIPanel.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIWindow.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUIShape.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUISprite.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUITextBlock.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\VisualState\ControlTemplate.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Binding\BindingValue.h" />
+    <ClInclude Include="..\..\LNote\Core\GUI\Binding\INotifyPropertyChanged.h" />
+    <ClInclude Include="..\..\LNote\Core\BuildSetting.h" />
+    <ClInclude Include="..\..\LNote\Core\Common.h" />
+    <ClInclude Include="..\..\LNote\link.h" />
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\LNote\Core\Game\Component\VisualModelComponent.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\GameObjectManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Math\Math.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Math\Random.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\Error.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\Exception.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\Hash.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\LogFile.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\MemoryManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\Misc.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\RefString.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\String.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Base\StringUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\Atomic.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\Barrier.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\EventFlag.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\Mutex.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\ReadWriteMutex.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\Semaphore.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Thread\Thread.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Manager_system.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\OS.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Common\ApplicationBase.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Win32\Application_win32.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Win32\SystemUtil_win32.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Win32\Window.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\X11\Application_x11.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\X11\Window_x11.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\X11\X11SystemUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Android\AndroidApplication.cpp" />
+    <ClCompile Include="..\..\LNote\Core\System\Android\AndroidWindow.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Manager_graphcis.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\BitmapTextRenderer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Common_graphics.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\DebugText.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\GeometryRenderer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\GraphicsUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Grid.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\PointParticle_graphics.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\RingRenderer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\SpriteRenderer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Model.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelConstraint.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelCore.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelFace.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelFrame.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelIK.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelRigidBody.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Motion.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\MotionController.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\AllocateHierarchy.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\ModelCore_x.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Image\Image.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Image\PngImage.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Canvas_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\DX9Module.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\GraphicsDevice_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\IndexBuffer_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Renderer_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Shader_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Texture_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\VertexBuffer_dx9.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\FontManagerBase.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\Win32\Win32Font.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\Win32\Win32FontManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLCanvas.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLGraphicsDevice.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLIndexBuffer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLPlatformContext.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLRenderer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLShader.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLShaderManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLTexture.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLVertexBuffer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL_buldShader.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Framework\Framework.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\DrawingShapes.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Geometry_kernel.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Matrix.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Quaternion.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\SQTTransform.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector2.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector3.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector4.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\Archive.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\ArchiveMaker.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\FileUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\InFile.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\Manager_fileio.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\OutFile.cpp" />
+    <ClCompile Include="..\..\LNote\Core\File\StreamObject.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Resource\LNResource.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\GameAudio.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Manager_audio.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Sound.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioResourceManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioSource.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioUtil.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\DirectMusic.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioDevice.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioPlayer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Animation\FixedLengthScalar.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Animation\ModelMotion.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Animation\Scalar.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\GameController.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Joypad.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Keyboard.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Manager_input.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Mouse.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Touch.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\InputDevice_dinput.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\JoypadDevice_dinput.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\XInputModule.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Input\Android\AndroidInputDevice.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\BodyBase.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\Manager_physics.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\Box.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\Plane.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\RigidBody.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\TriMesh.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Physics\Joint\JointBase.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\FPSController.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\GameObject.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\GameScene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\GameSceneManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\Component\GameComponent.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\Component\ModelComponent.cpp" />
+    <ClCompile Include="..\..\LNote\Function\FuncLibManager.cpp" />
+    <ClCompile Include="..\..\LNote\Function\LFAudio.cpp" />
+    <ClCompile Include="..\..\LNote\Function\LFFile.cpp" />
+    <ClCompile Include="..\..\LNote\Function\LFFramework.cpp" />
+    <ClCompile Include="..\..\LNote\Function\LFGraphics.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\DrawCommand.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\Manager_scene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneGraph.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\_Tempalte.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\BatchSprite.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Camera.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\DummyNode.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Effect_scene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Grid_scene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Light.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Model_scene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\NodeRenderParam.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Pane.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\PointParticle.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Proxy.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\SceneNode.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Sprite.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Sprite3D.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Tilemap.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Viewport.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\OffscreenScene.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShader.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderTechnique.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Manager_effect.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\EmitterBase.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\RingEmitter.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\Sprite3DEmitter.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\SpriteEmitter.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrack.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrackGroup.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectCore.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectMasterAnimationTrack.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectNodeCore.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectInstance.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstance.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceContainer.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceGroup.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Task\Manager_task.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Task\Task.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\GUIElement.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Manager_gui.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIButton.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIContentControl.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIControl.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIDesktop.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUILabel.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIPanel.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIWindow.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUIShape.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUISprite.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUITextBlock.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\VisualState\ControlTemplate.cpp" />
+    <ClCompile Include="..\..\LNote\Core\GUI\Binding\BindingValue.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DependenciesLib\DependenciesLib.vcxproj">
+      <Project>{064d8a16-52b0-4ffe-b6f2-811d399e5a0f}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

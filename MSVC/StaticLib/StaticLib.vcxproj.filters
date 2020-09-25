@@ -1,0 +1,1466 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Math">
+      <UniqueIdentifier>{ab3edff4-70fb-478f-86c7-5cf6b8448275}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base">
+      <UniqueIdentifier>{c94da709-9bbc-4d6d-892b-ef9d41fbec73}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Base\Container">
+      <UniqueIdentifier>{8b97b64a-1a36-48f8-ab72-af44c1c25303}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Thread">
+      <UniqueIdentifier>{1a14e693-4ea8-496a-a1a1-ad067d7ab8a3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System">
+      <UniqueIdentifier>{dd854f65-5ded-473a-8ef1-be0e115ac845}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Common">
+      <UniqueIdentifier>{3752033f-0163-4146-9d15-0414c8d3a95b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Win32">
+      <UniqueIdentifier>{147bbc8c-d405-4148-9549-3aac286aa6ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\X11">
+      <UniqueIdentifier>{9cb1f8da-427c-403d-bcdd-e30e047c1651}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="System\Android">
+      <UniqueIdentifier>{a1705125-42cf-4d77-888e-c458df189f2f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics">
+      <UniqueIdentifier>{e09da9a0-c8a5-4ff8-aa67-dcccea273d8a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Common">
+      <UniqueIdentifier>{bb362a0d-1653-4811-9247-985559e7fa94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Common\Model">
+      <UniqueIdentifier>{24d95b98-3555-4bf7-bd84-06e51c8ce158}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Common\Model\Xfile">
+      <UniqueIdentifier>{4fdcb4fc-6100-4994-8dbb-8a581aad16fa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Common\Image">
+      <UniqueIdentifier>{091f887f-f61d-4b5c-b964-e595bd56d0be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\DirectX9">
+      <UniqueIdentifier>{a3bd9f22-c51d-4215-83bd-1811f4717548}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Font">
+      <UniqueIdentifier>{918ad179-08e7-4a7b-8852-7302ac7c476d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\Font\Win32">
+      <UniqueIdentifier>{6851bdd5-35a0-4113-a338-ba89a5356628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGL">
+      <UniqueIdentifier>{535cd6a1-10a4-4970-a83c-7d132e6696fd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Graphics\OpenGL\LNGL">
+      <UniqueIdentifier>{464767cc-f1c6-4494-9ce8-8f97da2f3cbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Framework">
+      <UniqueIdentifier>{81c94dd7-5f48-4e82-95e6-0b7abc11b631}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Geometry">
+      <UniqueIdentifier>{947367f9-1604-4224-865b-2417d428299b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="File">
+      <UniqueIdentifier>{11f23721-6962-4324-a699-2b72cbf14c45}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource">
+      <UniqueIdentifier>{7be399b3-2920-4c0d-b605-1f2a7ab43872}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio">
+      <UniqueIdentifier>{1db62439-87db-4f02-a6aa-d492115c2088}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio\Core">
+      <UniqueIdentifier>{47c9d5e9-49ff-42c7-af2d-62976f5d8a4e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Audio\Core\XAudio2">
+      <UniqueIdentifier>{5c91c439-ecbe-4877-865a-50d9cfcb9115}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Animation">
+      <UniqueIdentifier>{596cd6ad-5722-463f-8b78-969c528d5a26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input">
+      <UniqueIdentifier>{764e9fb6-bd2a-4bad-93e2-abf6b155ea63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Win32">
+      <UniqueIdentifier>{670ebcbe-00b7-4d93-a0b9-e04c3c5ba868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Input\Android">
+      <UniqueIdentifier>{6e5c4694-0aa4-4c96-aded-efab78e1f953}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics">
+      <UniqueIdentifier>{262cdee3-53aa-441e-bf38-a206d0f81861}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\RigidBody">
+      <UniqueIdentifier>{4921bb40-f92d-4587-8479-0b42e7c39ba0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Physics\Joint">
+      <UniqueIdentifier>{7eef5b5c-f363-4441-bd45-70b6f5704e6d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{2f76dc64-a411-448d-82d6-894aa7fc2826}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Component">
+      <UniqueIdentifier>{9d71ec42-1a3b-4b4f-bcfa-b5b66f96633b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Function">
+      <UniqueIdentifier>{738c56eb-896a-41ad-9eee-7170d600ebe5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene">
+      <UniqueIdentifier>{14327dae-aa36-4b3f-8b4e-7f9888921056}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\SceneNode">
+      <UniqueIdentifier>{128beadb-b876-4ebb-a4dc-567c2b054ba2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Scene\SceneShader">
+      <UniqueIdentifier>{9b46471d-51ef-4efd-90f9-13ea00d4f5b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect">
+      <UniqueIdentifier>{0e885940-c21c-4481-a145-d4ffa38b2436}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect\Emitter">
+      <UniqueIdentifier>{79b355a6-0f0d-4ece-85aa-5d22cda65d5f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect\Core">
+      <UniqueIdentifier>{a5969da2-e73f-406f-a513-196076b6019e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Effect\Instance">
+      <UniqueIdentifier>{902f5d99-58fa-4613-b246-edde442022dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Task">
+      <UniqueIdentifier>{7f949af9-c1c1-4d04-b7bd-8a1b79250f44}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI">
+      <UniqueIdentifier>{7f48c5e5-b0a9-4e08-b5a4-5f9eaa0f1868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Controls">
+      <UniqueIdentifier>{c41a7fbb-a19d-49b7-8123-d95c7435f88d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Shapes">
+      <UniqueIdentifier>{b643667c-1d05-43cc-b01d-8c15812ba000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\VisualState">
+      <UniqueIdentifier>{dc5a4bdd-46db-4e61-a78f-af319527b073}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GUI\Binding">
+      <UniqueIdentifier>{4671c234-a996-4c31-b20b-5d57b25a9d7b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\Core\Math\Asm.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Math\Enum.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Math\Math.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Math\Random.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\BoolArray.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Cache.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\CommandLineArguments.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Delegate.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Error.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Exception.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Foreach.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Hash.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\HierarchyNode.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Interface.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\LogFile.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\MemoryManager.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Misc.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\RefClass.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\RefClassTemplate.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\ReferenceObject.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\RefPtr.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\RefString.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\SharingKey.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\STLUtil.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\String.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\StringUtil.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\TChar.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Time.h">
+      <Filter>Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Container\List.h">
+      <Filter>Base\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Container\Map.h">
+      <Filter>Base\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Container\NodeList.h">
+      <Filter>Base\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Base\Container\Stack.h">
+      <Filter>Base\Container</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\Atomic.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\Barrier.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\EventFlag.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\Mutex.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\ReadWriteMutex.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\Semaphore.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Thread\Thread.h">
+      <Filter>Thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Event.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Interface.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Manager.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\OS.h">
+      <Filter>System</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Common\ApplicationBase.h">
+      <Filter>System\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Common\PerfStopwatch.h">
+      <Filter>System\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Common\WindowBase.h">
+      <Filter>System\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Win32\Application.h">
+      <Filter>System\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Win32\DummyWindow.h">
+      <Filter>System\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Win32\SystemUtil.h">
+      <Filter>System\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Win32\Window.h">
+      <Filter>System\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\X11\Application.h">
+      <Filter>System\X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\X11\Window.h">
+      <Filter>System\X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\X11\X11SystemUtil.h">
+      <Filter>System\X11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Android\AndroidApplication.h">
+      <Filter>System\Android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\System\Android\AndroidWindow.h">
+      <Filter>System\Android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Interface.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Manager.h">
+      <Filter>Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\BitmapTextRenderer.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Common.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\DebugText.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\GeometryRenderer.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Gizmo.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\GraphicsUtil.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Grid.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\PointParticle.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\PointParticleParameter.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\RenderState.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\RingRenderer.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\SpriteRenderer.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Types.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\VertexTypes.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ConvertBlendedMesh.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Model.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelConstraint.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelCore.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelFace.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelFrame.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelIK.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelManager.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\ModelRigidBody.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Motion.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\MotionController.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\PMDTypes.h">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\AllocateHierarchy.h">
+      <Filter>Graphics\Common\Model\Xfile</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Image\Image.h">
+      <Filter>Graphics\Common\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Image\PngImage.h">
+      <Filter>Graphics\Common\Image</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Canvas.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\DX9Module.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\GraphicsDevice.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\IndexBuffer.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Renderer.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Shader.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\Texture.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\DirectX9\VertexBuffer.h">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\FontManagerBase.h">
+      <Filter>Graphics\Font</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\Win32\Win32Font.h">
+      <Filter>Graphics\Font\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Font\Win32\Win32FontManager.h">
+      <Filter>Graphics\Font\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLCanvas.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLGraphicsDevice.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLIndexBuffer.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLPlatformContext.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLRenderer.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLShader.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLShaderManager.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLTexture.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLUtil.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\GLVertexBuffer.h">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL.h">
+      <Filter>Graphics\OpenGL\LNGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Framework\ConfigData.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Framework\Framework.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Framework\Types.h">
+      <Filter>Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Collision.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Common.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\DrawingShapes.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Geometry.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Matrix.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Quaternion.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\SQTTransform.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector2.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector3.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Geometry\Vector4.h">
+      <Filter>Geometry</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\Archive.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\ArchiveMaker.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\ASyncProcessObject.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\FileUtil.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\InFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\Interface.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\Manager.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\OutFile.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\File\StreamObject.h">
+      <Filter>File</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Resource\LNResource.h">
+      <Filter>Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\GameAudio.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Interface.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Manager.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Sound.h">
+      <Filter>Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioResourceManager.h">
+      <Filter>Audio\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioSource.h">
+      <Filter>Audio\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\AudioUtil.h">
+      <Filter>Audio\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\DirectMusic.h">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioDevice.h">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioPlayer.h">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Animation\FadeValue.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Animation\FixedLengthScalar.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Animation\ModelMotion.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Animation\Scalar.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Animation\Types.h">
+      <Filter>Animation</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\GameController.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Interface.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Joypad.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Keyboard.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Manager.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Mouse.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Touch.h">
+      <Filter>Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\InputDevice.h">
+      <Filter>Input\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\JoypadDevice.h">
+      <Filter>Input\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Win32\XInputModule.h">
+      <Filter>Input\Win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Input\Android\AndroidInputDevice.h">
+      <Filter>Input\Android</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\BodyBase.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\IDebugRenderer.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\Manager.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\Types.h">
+      <Filter>Physics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\Box.h">
+      <Filter>Physics\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\Plane.h">
+      <Filter>Physics\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\RigidBody.h">
+      <Filter>Physics\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\RigidBody\TriangleMesh.h">
+      <Filter>Physics\RigidBody</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Physics\Joint\JointBase.h">
+      <Filter>Physics\Joint</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\Common.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\FPSController.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\GameObject.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\GameScene.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\GameSceneManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\GameTime.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\Component\GameComponent.h">
+      <Filter>Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\Component\ModelComponent.h">
+      <Filter>Game\Component</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\FuncLibManager.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFAudio.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFCommon.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFFile.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFFramework.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFGraphics.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Function\LFStdAfx.h">
+      <Filter>Function</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\Common.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\DrawCommand.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\Manager.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneGraph.h">
+      <Filter>Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\_Tempalte.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\BatchSprite.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Camera.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\DummyNode.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Effect.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Grid.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Light.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Model.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\NodeRenderParam.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Pane.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\PointParticle.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Proxy.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\SceneNode.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Sprite.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Sprite3D.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Terrain.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Tilemap.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Util.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneNode\Viewport.h">
+      <Filter>Scene\SceneNode</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\MMETypes.h">
+      <Filter>Scene\SceneShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\OffscreenScene.h">
+      <Filter>Scene\SceneShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShader.h">
+      <Filter>Scene\SceneShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderManager.h">
+      <Filter>Scene\SceneShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderTechnique.h">
+      <Filter>Scene\SceneShader</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Manager.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Types.h">
+      <Filter>Effect</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\EmitterBase.h">
+      <Filter>Effect\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\RingEmitter.h">
+      <Filter>Effect\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\Sprite3DEmitter.h">
+      <Filter>Effect\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Emitter\SpriteEmitter.h">
+      <Filter>Effect\Emitter</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrack.h">
+      <Filter>Effect\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrackGroup.h">
+      <Filter>Effect\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectCore.h">
+      <Filter>Effect\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectMasterAnimationTrack.h">
+      <Filter>Effect\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Core\EffectNodeCore.h">
+      <Filter>Effect\Core</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectInstance.h">
+      <Filter>Effect\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstance.h">
+      <Filter>Effect\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceContainer.h">
+      <Filter>Effect\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceGroup.h">
+      <Filter>Effect\Instance</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Task\ITaskExecuteHandler.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Task\Manager.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Task\Task.h">
+      <Filter>Task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Common.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\GUIElement.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\GUIEvent.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Manager.h">
+      <Filter>GUI</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIButton.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIContentControl.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIControl.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIDesktop.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUILabel.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIPanel.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Controls\GUIWindow.h">
+      <Filter>GUI\Controls</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUIShape.h">
+      <Filter>GUI\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUISprite.h">
+      <Filter>GUI\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Shapes\GUITextBlock.h">
+      <Filter>GUI\Shapes</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\VisualState\ControlTemplate.h">
+      <Filter>GUI\VisualState</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Binding\BindingValue.h">
+      <Filter>GUI\Binding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\GUI\Binding\INotifyPropertyChanged.h">
+      <Filter>GUI\Binding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\BuildSetting.h" />
+    <ClInclude Include="..\..\LNote\Core\Common.h" />
+    <ClInclude Include="..\..\LNote\link.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\..\LNote\Core\Game\GameObjectManager.h">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Game\Component\VisualModelComponent.h">
+      <Filter>Game\Component</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\LNote\Core\Math\Math.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Math\Random.cpp">
+      <Filter>Math</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\Error.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\Exception.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\Hash.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\LogFile.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\MemoryManager.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\Misc.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\RefString.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\String.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Base\StringUtil.cpp">
+      <Filter>Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\Atomic.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\Barrier.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\EventFlag.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\Mutex.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\ReadWriteMutex.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\Semaphore.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Thread\Thread.cpp">
+      <Filter>Thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Manager_system.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\OS.cpp">
+      <Filter>System</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Common\ApplicationBase.cpp">
+      <Filter>System\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Win32\Application_win32.cpp">
+      <Filter>System\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Win32\SystemUtil_win32.cpp">
+      <Filter>System\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Win32\Window.cpp">
+      <Filter>System\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\X11\Application_x11.cpp">
+      <Filter>System\X11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\X11\Window_x11.cpp">
+      <Filter>System\X11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\X11\X11SystemUtil.cpp">
+      <Filter>System\X11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Android\AndroidApplication.cpp">
+      <Filter>System\Android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\System\Android\AndroidWindow.cpp">
+      <Filter>System\Android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Manager_graphcis.cpp">
+      <Filter>Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\BitmapTextRenderer.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Common_graphics.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\DebugText.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\GeometryRenderer.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\GraphicsUtil.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Grid.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\PointParticle_graphics.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\RingRenderer.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\SpriteRenderer.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Model.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelConstraint.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelCore.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelFace.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelFrame.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelIK.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelManager.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\ModelRigidBody.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Motion.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\MotionController.cpp">
+      <Filter>Graphics\Common\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\AllocateHierarchy.cpp">
+      <Filter>Graphics\Common\Model\Xfile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Model\Xfile\ModelCore_x.cpp">
+      <Filter>Graphics\Common\Model\Xfile</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Image\Image.cpp">
+      <Filter>Graphics\Common\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Image\PngImage.cpp">
+      <Filter>Graphics\Common\Image</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Canvas_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\DX9Module.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\GraphicsDevice_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\IndexBuffer_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Renderer_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Shader_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\Texture_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\DirectX9\VertexBuffer_dx9.cpp">
+      <Filter>Graphics\DirectX9</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\FontManagerBase.cpp">
+      <Filter>Graphics\Font</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\Win32\Win32Font.cpp">
+      <Filter>Graphics\Font\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Font\Win32\Win32FontManager.cpp">
+      <Filter>Graphics\Font\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLCanvas.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLGraphicsDevice.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLIndexBuffer.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLPlatformContext.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLRenderer.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLShader.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLShaderManager.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLTexture.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLUtil.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\GLVertexBuffer.cpp">
+      <Filter>Graphics\OpenGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL.cpp">
+      <Filter>Graphics\OpenGL\LNGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\OpenGL\LNGL\LNGL_buldShader.cpp">
+      <Filter>Graphics\OpenGL\LNGL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Framework\Framework.cpp">
+      <Filter>Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\DrawingShapes.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Geometry_kernel.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Matrix.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Quaternion.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\SQTTransform.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector2.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector3.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Geometry\Vector4.cpp">
+      <Filter>Geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\Archive.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\ArchiveMaker.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\FileUtil.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\InFile.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\Manager_fileio.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\OutFile.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\File\StreamObject.cpp">
+      <Filter>File</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Resource\LNResource.cpp">
+      <Filter>Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\GameAudio.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Manager_audio.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Sound.cpp">
+      <Filter>Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioResourceManager.cpp">
+      <Filter>Audio\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioSource.cpp">
+      <Filter>Audio\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\AudioUtil.cpp">
+      <Filter>Audio\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\DirectMusic.cpp">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioDevice.cpp">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Audio\Core\XAudio2\XA2AudioPlayer.cpp">
+      <Filter>Audio\Core\XAudio2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Animation\FixedLengthScalar.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Animation\ModelMotion.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Animation\Scalar.cpp">
+      <Filter>Animation</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\GameController.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Joypad.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Keyboard.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Manager_input.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Mouse.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Touch.cpp">
+      <Filter>Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\InputDevice_dinput.cpp">
+      <Filter>Input\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\JoypadDevice_dinput.cpp">
+      <Filter>Input\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Win32\XInputModule.cpp">
+      <Filter>Input\Win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Input\Android\AndroidInputDevice.cpp">
+      <Filter>Input\Android</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\BodyBase.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\Manager_physics.cpp">
+      <Filter>Physics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\Box.cpp">
+      <Filter>Physics\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\Plane.cpp">
+      <Filter>Physics\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\RigidBody.cpp">
+      <Filter>Physics\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\RigidBody\TriMesh.cpp">
+      <Filter>Physics\RigidBody</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Physics\Joint\JointBase.cpp">
+      <Filter>Physics\Joint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\FPSController.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\GameObject.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\GameScene.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\GameSceneManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\Component\GameComponent.cpp">
+      <Filter>Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\Component\ModelComponent.cpp">
+      <Filter>Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Function\FuncLibManager.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Function\LFAudio.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Function\LFFile.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Function\LFFramework.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Function\LFGraphics.cpp">
+      <Filter>Function</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\DrawCommand.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\Manager_scene.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneGraph.cpp">
+      <Filter>Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\_Tempalte.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\BatchSprite.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Camera.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\DummyNode.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Effect_scene.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Grid_scene.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Light.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Model_scene.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\NodeRenderParam.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Pane.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\PointParticle.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Proxy.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\SceneNode.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Sprite.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Sprite3D.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Tilemap.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneNode\Viewport.cpp">
+      <Filter>Scene\SceneNode</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\OffscreenScene.cpp">
+      <Filter>Scene\SceneShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShader.cpp">
+      <Filter>Scene\SceneShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderManager.cpp">
+      <Filter>Scene\SceneShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Scene\SceneShader\SceneShaderTechnique.cpp">
+      <Filter>Scene\SceneShader</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Manager_effect.cpp">
+      <Filter>Effect</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\EmitterBase.cpp">
+      <Filter>Effect\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\RingEmitter.cpp">
+      <Filter>Effect\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\Sprite3DEmitter.cpp">
+      <Filter>Effect\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Emitter\SpriteEmitter.cpp">
+      <Filter>Effect\Emitter</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrack.cpp">
+      <Filter>Effect\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectAnimationTrackGroup.cpp">
+      <Filter>Effect\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectCore.cpp">
+      <Filter>Effect\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectMasterAnimationTrack.cpp">
+      <Filter>Effect\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Core\EffectNodeCore.cpp">
+      <Filter>Effect\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectInstance.cpp">
+      <Filter>Effect\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstance.cpp">
+      <Filter>Effect\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceContainer.cpp">
+      <Filter>Effect\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Effect\Instance\EffectNodeInstanceGroup.cpp">
+      <Filter>Effect\Instance</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Task\Manager_task.cpp">
+      <Filter>Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Task\Task.cpp">
+      <Filter>Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\GUIElement.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Manager_gui.cpp">
+      <Filter>GUI</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIButton.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIContentControl.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIControl.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIDesktop.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUILabel.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIPanel.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Controls\GUIWindow.cpp">
+      <Filter>GUI\Controls</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUIShape.cpp">
+      <Filter>GUI\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUISprite.cpp">
+      <Filter>GUI\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Shapes\GUITextBlock.cpp">
+      <Filter>GUI\Shapes</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\VisualState\ControlTemplate.cpp">
+      <Filter>GUI\VisualState</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\GUI\Binding\BindingValue.cpp">
+      <Filter>GUI\Binding</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Game\GameObjectManager.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Game\Component\VisualModelComponent.cpp">
+      <Filter>Game\Component</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

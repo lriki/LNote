@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{44F7A2E4-7715-4B57-A7D9-23C9B18891B1}</ProjectGuid>
+    <RootNamespace>UtilityLib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)..\LNote\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)..\LNote\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <ProgramDataBaseFileName>$(OutDir)$(SolutionName)_binding_d.pdb</ProgramDataBaseFileName>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_utility_d.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_utility.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <AdditionalIncludeDirectories>.;..\..\LNote;..\..\LNote\Dependencies;..\..\LNote\Dependencies\libogg\include;..\..\LNote\Dependencies\libvorbis\include;..\..\LNote\Dependencies\bullet;..\..\LNote\Dependencies\glew\include;..\..\LNote\Dependencies\mruby\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>
+      </DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <OutputFile>$(OutDir)$(SolutionName)_utility.lib</OutputFile>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\LNote\Utility\GameScene\GameScene.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\GameScene\GameSceneManager.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Audio\LAudioModule.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\Gateway.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\LConfig.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\LFramework.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Game\LGameScene.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Graphics\LGraphicsModule.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LGameController.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LInput.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LJoypad.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LKeyboard.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LMouse.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Utility\FormatText.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\EntryPoint\EntryPoint.cpp" />
+    <ClCompile Include="..\..\LNote\Utility\Light\Accessor.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\Utility\GameScene\GameScene.h" />
+    <ClInclude Include="..\..\LNote\Utility\GameScene\GameSceneManager.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Audio\LGameAudio.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Audio\LSound.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Base\LRefClass.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Base\Types.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\Gateway.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\LConfig.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\LFramework.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Game\LGameScene.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LBatchPanel.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LCamera.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LDebugFont.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LFont.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LGraphics.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LLayer.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LPanel.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LParticle.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LSceneObject.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LShader.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LSprite.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LTexture.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\Types.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LGameController.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LInput.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LJoypad.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LKeyboard.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LMouse.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Math\LMath.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\FormatText.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\MessageQueue.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\PerfStopwatch.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Accessor.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Common.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\UtilCommon.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\StaticLib\StaticLib.vcxproj">
+      <Project>{36a66bbf-04c6-4d00-8c63-e14446122701}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

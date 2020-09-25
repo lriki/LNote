@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="GameScene">
+      <UniqueIdentifier>{8981047e-1dc6-4f97-aed1-e0f453ce680f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light">
+      <UniqueIdentifier>{de133314-4cf7-4539-b373-22c0ab5b7428}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Audio">
+      <UniqueIdentifier>{2f364ca6-0236-4393-a885-efc235658e09}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Base">
+      <UniqueIdentifier>{59649f10-bdc3-44ba-83f2-eccc99a3d046}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Framework">
+      <UniqueIdentifier>{1033237a-1413-4b38-acaf-86c89dc8ba84}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Game">
+      <UniqueIdentifier>{e2add2aa-7f35-4a7f-9183-001ea0cf6044}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Graphics">
+      <UniqueIdentifier>{303c2e8f-c4b3-4367-8305-5ddc14f663ff}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Input">
+      <UniqueIdentifier>{45c9d242-2da6-4635-aa48-40f5a693fe94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Math">
+      <UniqueIdentifier>{68204add-2bfd-4c66-b464-fdd1ba0834b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\Utility">
+      <UniqueIdentifier>{78e2781f-e23c-42a3-b502-299a3cb1513a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Light\EntryPoint">
+      <UniqueIdentifier>{efcbeedc-c8fc-4162-8ad7-892437ecd176}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\LNote\Utility\GameScene\GameScene.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\GameScene\GameSceneManager.cpp">
+      <Filter>GameScene</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Audio\LAudioModule.cpp">
+      <Filter>Light\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\Gateway.cpp">
+      <Filter>Light\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\LConfig.cpp">
+      <Filter>Light\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Framework\LFramework.cpp">
+      <Filter>Light\Framework</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Game\LGameScene.cpp">
+      <Filter>Light\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Graphics\LGraphicsModule.cpp">
+      <Filter>Light\Graphics</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LGameController.cpp">
+      <Filter>Light\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LInput.cpp">
+      <Filter>Light\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LJoypad.cpp">
+      <Filter>Light\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LKeyboard.cpp">
+      <Filter>Light\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Input\LMouse.cpp">
+      <Filter>Light\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Utility\FormatText.cpp">
+      <Filter>Light\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\EntryPoint\EntryPoint.cpp">
+      <Filter>Light\EntryPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Utility\Light\Accessor.cpp" />
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\Utility\GameScene\GameScene.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\GameScene\GameSceneManager.h">
+      <Filter>GameScene</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Audio\LGameAudio.h">
+      <Filter>Light\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Audio\LSound.h">
+      <Filter>Light\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Base\LRefClass.h">
+      <Filter>Light\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Base\Types.h">
+      <Filter>Light\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\Gateway.h">
+      <Filter>Light\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\LConfig.h">
+      <Filter>Light\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Framework\LFramework.h">
+      <Filter>Light\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Game\LGameScene.h">
+      <Filter>Light\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LBatchPanel.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LCamera.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LDebugFont.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LFont.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LGraphics.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LLayer.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LPanel.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LParticle.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LSceneObject.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LShader.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LSprite.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\LTexture.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Graphics\Types.h">
+      <Filter>Light\Graphics</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LGameController.h">
+      <Filter>Light\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LInput.h">
+      <Filter>Light\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LJoypad.h">
+      <Filter>Light\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LKeyboard.h">
+      <Filter>Light\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Input\LMouse.h">
+      <Filter>Light\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Math\LMath.h">
+      <Filter>Light\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\FormatText.h">
+      <Filter>Light\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\MessageQueue.h">
+      <Filter>Light\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Utility\PerfStopwatch.h">
+      <Filter>Light\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Utility\Light\Accessor.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\Common.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="..\..\LNote\Utility\Light\UtilCommon.h" />
+  </ItemGroup>
+</Project>

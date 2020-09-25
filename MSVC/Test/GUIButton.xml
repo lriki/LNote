@@ -1,0 +1,33 @@
+
+<ControlTemplate x:Name="Button" TargetType="Button">
+    <BorderFrame
+        x:Name="Border"
+        ImageSouce="LNButton.png"
+        SourceRect="0, 0, 32, 32"
+        Tiling="true">
+        <ContentPresenter
+            Margin="2"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center"/>
+    </BorderFrame>
+    
+    デフォルトで全パターン作っておいて、ここに記述されてるものはオーバーライドするのがいいかも
+    <ControlTemplate.Triggers>
+        <Trigger Property="IsKeyboardFocused" Value="true">
+            <Setter TargetName="Border" Property="SourceRect" Value="32, 0, 32, 32" />
+        </Trigger>
+        <Trigger Property="IsMouseOver" Value="true">
+            <Setter TargetName="Border" Property="SourceRect" Value="64, 0, 32, 32" />
+        </Trigger>
+        <Trigger Property="IsPressed" Value="true">
+            <Setter TargetName="Border" Property="SourceRect" Value="96, 0, 32, 32" />
+        </Trigger>
+        <Trigger Property="IsEnabled" Value="false">
+            <Setter TargetName="Border" Property="SourceRect" Value="128, 0, 32, 32" />
+        </Trigger>
+    </ControlTemplate.Triggers>
+</ControlTemplate>
+
+<style Key="ボタンスタイル1(任意の名前)" TargetType="Button" BasedOn="継承元">
+    <Setter Property="Template" Value="{DynamicResource ButtonTemplate}" />
+</style>

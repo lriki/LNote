@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Binding">
+      <UniqueIdentifier>{95e49a6e-8e82-45f1-a5fd-c6e87bc27852}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Binding\mruby">
+      <UniqueIdentifier>{44c37977-7dba-449c-8bdd-3d177f849d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Binding\Ruby">
+      <UniqueIdentifier>{c4ab9e37-47da-4494-a5de-0649894341ba}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\LNote\Binding\ScriptLinker.cpp">
+      <Filter>Binding</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\EntryPoint.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyAudio.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyEngine.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyException.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyFramework.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyGraphics.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyInput.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyMath.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\mruby\mrubyScene.cpp">
+      <Filter>Binding\mruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\Ruby\RubyEngine.cpp">
+      <Filter>Binding\Ruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\Ruby\RubyException.cpp">
+      <Filter>Binding\Ruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\Ruby\RubyFramework.cpp">
+      <Filter>Binding\Ruby</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Binding\Ruby\RubyGame.cpp">
+      <Filter>Binding\Ruby</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\LNote\Binding\ScriptLinker.h">
+      <Filter>Binding</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Binding\Ruby\Common.h">
+      <Filter>Binding\Ruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Binding\Ruby\RubyEngine.h">
+      <Filter>Binding\Ruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Binding\Ruby\RubyException.h">
+      <Filter>Binding\Ruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Binding\Ruby\RubyFramework.h">
+      <Filter>Binding\Ruby</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Binding\Ruby\RubyGame.h">
+      <Filter>Binding\Ruby</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\Common.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\EntryPoint.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyAudio.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyEngine.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyException.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyFramework.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyGraphics.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyInput.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyMath.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+    <CustomBuildStep Include="..\..\LNote\Binding\mruby\mrubyScene.h">
+      <Filter>Binding\mruby</Filter>
+    </CustomBuildStep>
+  </ItemGroup>
+</Project>
