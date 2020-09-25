@@ -1,0 +1,40 @@
+﻿■ Doxygen デフォルトの html ヘッダ、フッタ、ccs
+
+cd /d D:\LNoteProject\LNotePackage\Documents\doxygen
+doxygen -w html header.html footer.html stylesheet.css
+
+
+ln_codeblock=@htmlonly<div class="ln_lang_tabs">
+ln_endcodeblock=</div>@endhtmlonly
+ln_tabdecl=<ul class="ln_tab_menu">
+ln_endtabdecl=</ul>
+ln_tab{2}=<li name="\1"><a href="">\2</a></li>
+ln_code{2}=<div class="ln_tab_content" name="\1">\n<pre class="brush: \2">
+ln_endcode=</pre></div>
+
+
+@ln_codeblock
+    @ln_tabdecl
+    @ln_tab{tab1,C/C++(関数)}
+    @ln_tab{tab2,C/C++(クラス)}
+    @ln_tab{tab3,Ruby}
+    @ln_endtabdecl
+    @ln_code{tab1,cpp}
+int ary[5];
+    @ln_endcode
+    @ln_code{tab2,cpp}
+std::vector ary(5);
+    @ln_endcode
+    @ln_code{tab3,ruby}
+ary = []
+    @ln_endcode
+    @ln_endcodeblock
+
+
+■ SyntaxHighlighter
+http://ascii.jp/elem/000/000/401/401907/index-2.html
+
+サポートする言語が増えたら、header.html に
+<script type="text/javascript" src="sh/scripts/shBrushCpp.js"></script>
+あたりを追加していく。
+
