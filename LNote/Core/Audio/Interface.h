@@ -1,5 +1,5 @@
-//=============================================================================
-//�y Audio �z
+﻿//=============================================================================
+//【 Audio 】
 //-----------------------------------------------------------------------------
 ///**
 //  @file       Audio.h
@@ -34,7 +34,7 @@ class IResourceManager;
 class IAudioSource;
 class IAudioPlayer;
 
-/// 3D �T�E���h���X�i�[
+/// 3D サウンドリスナー
 struct LN3DSoundListener
 {
     LVector3    Position;
@@ -49,10 +49,10 @@ struct LN3DSoundListener
 };
 
 //=============================================================================
-// �� IManager �N���X
+// ■ IManager クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �I�[�f�B�I�@�\�̊Ǘ��C���^�[�t�F�C�X
+//  @brief      オーディオ機能の管理インターフェイス
 //*/
 //=============================================================================
 class IManager
@@ -60,25 +60,25 @@ class IManager
 {
 public:
 
-    /// GameAudio �N���X�̎擾
+    /// GameAudio クラスの取得
     virtual IGameAudio* getGameAudio() = 0;
 
-    /// �f�o�C�X�N���X�̎擾
+    /// デバイスクラスの取得
     virtual IAudioDevice* getAudioDevice() = 0;
 
-    /// ���\�[�X�Ǘ��N���X�̎擾
+    /// リソース管理クラスの取得
     virtual IResourceManager* getResourceManager() = 0;
 
-    /// ISound �̍쐬 (stream_ = NULL �ŃL�[���g�������������s��)
+    /// ISound の作成 (stream_ = NULL でキーを使った検索だけ行う)
     virtual LNRESULT createSound( ISound** sound_, File::IInStream* stream_, LNSoundPlayType type_, bool enable_3d_, Base::SharingKey key_ ) = 0;
 
-    /// ISound �̍쐬 (�t�@�C�����w��)
+    /// ISound の作成 (ファイル名指定)
     virtual LNRESULT createSound( ISound** sound_, const lnChar* filename_, LNSoundPlayType type_, bool enable_3d_ ) = 0;
 
-    /// ISound �̍쐬 (IAudioSource �w��)
+    /// ISound の作成 (IAudioSource 指定)
     virtual LNRESULT createSound( ISound** sound_, IAudioSource* source_, LNSoundPlayType type_, bool enable_3d_ ) = 0;
 
-    /// �O���[�v�̒�~
+    /// グループの停止
     virtual void stopGroup( u32 group_ ) = 0;
 
 protected:
@@ -87,13 +87,13 @@ protected:
 };
 
 //=============================================================================
-// �� GameAudio �N���X
+// ■ GameAudio クラス
 //-----------------------------------------------------------------------------
 ///**
-//	@brief      �Q�[���p�̉����̉��t�������N���X
+//	@brief      ゲーム用の音声の演奏を扱うクラス
 //
 //  @par
-//              ���̃N���X�̃C���X�^���X�� Engine::Audio::Manager �N���X����擾���܂��B
+//              このクラスのインスタンスは Engine::Audio::Manager クラスから取得します。
 //*/
 //=============================================================================
 class IGameAudio
@@ -103,142 +103,142 @@ public:
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGM �����t����
+    //  @brief      BGM を演奏する
     //
-    //  @param[in]  filename_  : �t�@�C����
-    //  @param[in]  volume_    : ����   (  0 �` 100 )
-    //  @param[in]  pitch_     : �s�b�` ( 50 �` 200 )
-    //  @param[in]  fade_time_ : �t�F�[�h�C���ɂ����鎞�� ( �~���b )
+    //  @param[in]  filename_  : ファイル名
+    //  @param[in]  volume_    : 音量   (  0 ～ 100 )
+    //  @param[in]  pitch_     : ピッチ ( 50 ～ 200 )
+    //  @param[in]  fade_time_ : フェードインにかける時間 ( ミリ秒 )
     //
     //  @par
-    //              filename_ �̉����t�@�C����ǂݍ���� BGM �Ƃ��ĉ��t���܂��B     <br>
-    //              BGM �͂ЂƂ������t���邱�Ƃ��ł��A���[�v�Đ����܂��B          <br>
-    //              ���� BGM �����t����Ă���ꍇ�͒�~���āA�V����BGM�����t���܂��B<br>
+    //              filename_ の音声ファイルを読み込んで BGM として演奏します。     <br>
+    //              BGM はひとつだけ演奏することができ、ループ再生します。          <br>
+    //              既に BGM が演奏されている場合は停止して、新しいBGMを演奏します。<br>
     //                                                                              <br>
-    //              fade_time_ �̓t�F�[�h�C���ɂ����鎞�Ԃł��B                     <br>
-    //              ���� BGM �̉��t���Ƀt�F�[�h�C�����悤�Ƃ����ꍇ�A               <br>
-    //              ���t���� BGM �ƃN���X�t�F�[�h���Ȃ��牉�t���J�n���܂��B         <br>
+    //              fade_time_ はフェードインにかける時間です。                     <br>
+    //              他の BGM の演奏中にフェードインしようとした場合、               <br>
+    //              演奏中の BGM とクロスフェードしながら演奏を開始します。         <br>
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playBGM( const lnChar* filename_, int volume_ = 100, int pitch_ = 100, int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGM �̉��t���~����
+    //  @brief      BGM の演奏を停止する
     //
-    //  @param[in]  fade_time_ : �t�F�[�h�A�E�g�ɂ����鎞�� ( �~���b )
+    //  @param[in]  fade_time_ : フェードアウトにかける時間 ( ミリ秒 )
     //*/
     //---------------------------------------------------------------------
 	virtual void stopBGM( int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGS ( ���� ) �����t����
+    //  @brief      BGS ( 環境音 ) を演奏する
     //
-    //  @param[in]  filename_  : �t�@�C����
-    //  @param[in]  volume_    : ����   (  0 �` 100 )
-    //  @param[in]  pitch_     : �s�b�` ( 50 �` 200 )
-    //  @param[in]  fade_time_ : �t�F�[�h�C���ɂ����鎞�� ( �~���b )
+    //  @param[in]  filename_  : ファイル名
+    //  @param[in]  volume_    : 音量   (  0 ～ 100 )
+    //  @param[in]  pitch_     : ピッチ ( 50 ～ 200 )
+    //  @param[in]  fade_time_ : フェードインにかける時間 ( ミリ秒 )
     //
     //  @par
-    //              BGM �Ɠ������@�ōĐ�����܂��B( �ЂƂ������t�A���[�v�Đ� )    <br>
-    //              BGS �� BGM �Ɠ����ɉ��t���邱�Ƃ��ł��AME ( ���ʉ��y ) �ɂ��   <br>
-    //              �e�����󂯂��A��ɉ��t����܂��B
+    //              BGM と同じ方法で再生されます。( ひとつだけ演奏、ループ再生 )    <br>
+    //              BGS は BGM と同時に演奏することができ、ME ( 効果音楽 ) による   <br>
+    //              影響を受けず、常に演奏されます。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playBGS( const lnChar* filename_, int volume_ = 100, int pitch_ = 100, int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGS �̉��t���~����
+    //  @brief      BGS の演奏を停止する
     //
-    //  @param[in]  fade_time_ : �t�F�[�h�A�E�g�ɂ����鎞�� ( �~���b )
+    //  @param[in]  fade_time_ : フェードアウトにかける時間 ( ミリ秒 )
     //*/
     //---------------------------------------------------------------------
 	virtual void stopBGS( int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ME ( ���ʉ��y ) �����t����
+    //  @brief      ME ( 効果音楽 ) を演奏する
     //
-    //  @param[in]  filename_  : �t�@�C����
-    //  @param[in]  volume_    : ����   (  0 �` 100 )
-    //  @param[in]  pitch_     : �s�b�` ( 50 �` 200 )
+    //  @param[in]  filename_  : ファイル名
+    //  @param[in]  volume_    : 音量   (  0 ～ 100 )
+    //  @param[in]  pitch_     : ピッチ ( 50 ～ 200 )
     //
     //  @par
-    //              filename_ �̉����t�@�C����ǂݍ���� ME �Ƃ��ĉ��t���܂��B      <br>
-    //              ���x���A�b�v��A�C�e���擾���̃t�@���t�@�[�����̉��t�Ɏg���܂��B<br>
-    //              ME �͂ЂƂ������t����A���[�v�Đ��͂��܂���B
-    //              ���� ME �����t����Ă���ꍇ�A����͒�~����܂��B             <br>
+    //              filename_ の音声ファイルを読み込んで ME として演奏します。      <br>
+    //              レベルアップやアイテム取得時のファンファーレ等の演奏に使います。<br>
+    //              ME はひとつだけ演奏され、ループ再生はしません。
+    //              既に ME が演奏されている場合、それは停止されます。             <br>
     //                                                                              <br>
-    //              ME �̉��t�J�n���� BGM �����t����Ă����ꍇ�� BGM �� 
-    //              500 �~���b�����Ĉꎞ��~�����A���̌�� ME �̉��t���J�n���܂��B  <br>
-    //              ���̏ꍇ�AME �̉��t�I����� BGM �̉��t���ĊJ���A
-    //              2000 �~���b������ BGM ���t�F�[�h�C�������܂��B                  <br>
+    //              ME の演奏開始時に BGM が演奏されていた場合は BGM を 
+    //              500 ミリ秒かけて一時停止させ、その後に ME の演奏を開始します。  <br>
+    //              その場合、ME の演奏終了後に BGM の演奏を再開し、
+    //              2000 ミリ秒かけて BGM をフェードインさせます。                  <br>
     //                                                                              <br>
-    //              ���̃t�F�[�h�C���A�t�F�[�h�A�E�g�ɂ����鎞�Ԃ�
-    //              setMEFadeState() �ɂ���Đݒ肷�邱�Ƃ��ł��܂��B
+    //              このフェードイン、フェードアウトにかける時間は
+    //              setMEFadeState() によって設定することができます。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playME( const lnChar* filename_, int volume_ = 100, int pitch_ = 100 ) = 0;
     
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ME �̉��t���~����
+    //  @brief      ME の演奏を停止する
     //
     //  @par
-    //              BGM �̈ꎞ��~���� ME ���~�����ꍇ�� playME() �̋L�q��
-    //              �����悤�� BGM ���t�F�[�h�C�������Ȃ���ĊJ�����܂��B
+    //              BGM の一時停止中に ME を停止した場合は playME() の記述と
+    //              同じように BGM をフェードインさせながら再開させます。
     //*/
     //---------------------------------------------------------------------
 	virtual void stopME() = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      SE �����t����
+    //  @brief      SE を演奏する
     //
-    //  @param[in]  filename_  : �t�@�C����
-    //  @param[in]  volume_    : ����   (  0 �` 100 )
-    //  @param[in]  pitch_     : �s�b�` ( 50 �` 200 )
+    //  @param[in]  filename_  : ファイル名
+    //  @param[in]  volume_    : 音量   (  0 ～ 100 )
+    //  @param[in]  pitch_     : ピッチ ( 50 ～ 200 )
     //
     //  @par
-    //              filename_ �̉����t�@�C����ǂݍ���� SE �Ƃ��ĉ��t���܂��B  <br>
-    //              SE �͓����ɕ����Đ����邱�Ƃ��ł��A�������������t�����ꍇ��
-    //              �d�˂�������ĉ��t����܂��B                                <br>
+    //              filename_ の音声ファイルを読み込んで SE として演奏します。  <br>
+    //              SE は同時に複数再生することができ、同じ音声を演奏した場合は
+    //              重ねがけされて演奏されます。                                <br>
     //                                                                          <br>
-    //              �܂��ASE �͕K���I���������ōĐ�����܂��B
+    //              また、SE は必ずオンメモリで再生されます。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playSE( const lnChar* filename_, int volume_ = 100, int pitch_ = 100 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      SE �� 3D ��ԏ�ŉ��t����
+    //  @brief      SE を 3D 空間上で演奏する
     //
-    //  @param[in]  filename_  : �t�@�C����
-    //  @param[in]  position_  : �����̈ʒu
-    //  @param[in]  volume_    : ����   (  0 �` 100 )
-    //  @param[in]  pitch_     : �s�b�` ( 50 �` 200 )
+    //  @param[in]  filename_  : ファイル名
+    //  @param[in]  position_  : 音源の位置
+    //  @param[in]  volume_    : 音量   (  0 ～ 100 )
+    //  @param[in]  pitch_     : ピッチ ( 50 ～ 200 )
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT playSE( const lnChar* filename_, const LVector3& position_, float distance, int volume_ = 100, int pitch_ = 100 ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �S�Ă� SE �̉��t���~����
+    //  @brief      全ての SE の演奏を停止する
     //*/
     //---------------------------------------------------------------------
 	virtual void stopSE() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ME ���t���� BGM �̃t�F�[�h���Ԃ�ݒ肷��
+    //  @brief      ME 演奏時の BGM のフェード時間を設定する
     //
-    //  @param[in]  begin_ : ME ���t�J�n���� BGM �̃t�F�[�h�A�E�g���� ( �~���b )
-    //  @param[in]  end_   : ME ���t�I����� BGM �̃t�F�[�h�C������ ( �~���b )
+    //  @param[in]  begin_ : ME 演奏開始時の BGM のフェードアウト時間 ( ミリ秒 )
+    //  @param[in]  end_   : ME 演奏終了後の BGM のフェードイン時間 ( ミリ秒 )
     //
     //  @par
-    //              -1 ���w�肵�����ڂ͒l��ύX���܂���B
+    //              -1 を指定した項目は値を変更しません。
     //*/
     //---------------------------------------------------------------------
     virtual void setMEFadeState( int begin_, int end_ ) = 0;
@@ -246,51 +246,51 @@ public:
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �w�肳�ꂽ ISound �� BGM �Ƃ��ĉ��t����
+    //  @brief      指定された ISound を BGM として演奏する
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playBGMFromSound( ISound* sound_, int volume_ = 100, int pitch_ = 100  , int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �w�肳�ꂽ ISound �� BGS �Ƃ��ĉ��t����
+    //  @brief      指定された ISound を BGS として演奏する
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playBGSFromSound( ISound* sound_, int volume_ = 100, int pitch_ = 100  , int fade_time_ = 0 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �w�肳�ꂽ ISound �� ME �Ƃ��ĉ��t����
+    //  @brief      指定された ISound を ME として演奏する
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playMEFromSound( ISound* sound_, int volume_ = 100, int pitch_ = 100 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �w�肳�ꂽ ISound �� SE �Ƃ��ĉ��t����
+    //  @brief      指定された ISound を SE として演奏する
     //
     //  @par
-    //              �����̃R�s�[���쐬���āA��������t���܂��B
+    //              音声のコピーを作成して、それを演奏します。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT playSEFromSound( ISound* sound_, int volume_ = 100, int pitch_ = 100 ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���� BGM �̉��t�ĊJ�t���O�̐ݒ�
+    //  @brief      同名 BGM の演奏再開フラグの設定
     //
     //  @par
-    //              playBGM �Ō��݉��t���� BGM �Ɠ����t�@�C���� (�܂��̓T�E���h) ���A
-    //              �����{�����[���A�s�b�`�ŉ��t���悤�Ƃ����Ƃ��ɁA���̂܂܉��t�𑱂��邩�A
-    //              �Ȃ̐擪�ɖ߂��ĉ��t���Ȃ�������ݒ肵�܂��B
-    //              �f�t�H���g�� false (���t�𑱂���) �ł��B
+    //              playBGM で現在演奏中の BGM と同じファイル名 (またはサウンド) を、
+    //              同じボリューム、ピッチで演奏しようとしたときに、そのまま演奏を続けるか、
+    //              曲の先頭に戻って演奏しなおすかを設定します。
+    //              デフォルトは false (演奏を続ける) です。
     //*/
     //---------------------------------------------------------------------
 	virtual void setEnableBGMRestart( bool flag_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���� BGS �̉��t�ĊJ�t���O�̐ݒ�
+    //  @brief      同名 BGS の演奏再開フラグの設定
     //*/
     //---------------------------------------------------------------------
 	virtual void setEnableBGSRestart( bool flag_ ) = 0;
@@ -301,13 +301,13 @@ protected:
 };
 
 //=============================================================================
-// �� ISound �N���X
+// ■ ISound クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �����Ƃ��̍Đ��������N���X�̃C���^�[�t�F�[�X
+//  @brief      音声とその再生を扱うクラスのインターフェース
 //
 //  @par
-//              IAudioPlayer �� IAudioSource �̃��b�p�[�ł��B
+//              IAudioPlayer と IAudioSource のラッパーです。
 //*/
 //=============================================================================
 class ISound
@@ -315,110 +315,110 @@ class ISound
 {
 public:
 
-	/// ���ʂ̎擾
+	/// 音量の取得
 	virtual int getVolume() = 0;
 
-	/// ���ʂ̐ݒ�
+	/// 音量の設定
 	virtual void setVolume( int volume_ ) = 0;
 
-	/// �s�b�`�̎擾
+	/// ピッチの取得
 	virtual int getPitch() = 0;
 
-	/// �s�b�`�̐ݒ�
+	/// ピッチの設定
 	virtual void setPitch( int pitch_ ) = 0;
 
-	///// �Đ������𔻒肷��
+	///// 再生中かを判定する
 	//virtual bool isPlaying() = 0;
 
-	///// �ꎞ��~�����𔻒肷��
+	///// 一時停止中かを判定する
 	//virtual bool isPausing() = 0;
 
-    /// �T�E���h�̏�Ԃ��擾����
+    /// サウンドの状態を取得する
     virtual void getState( LNAudioPlayState* state_ ) = 0;
 
-    /// ���[�v�Đ��̗L���ݒ�
+    /// ループ再生の有効設定
     virtual void loop( bool loop_ ) = 0;
 
-    /// ���[�v�Đ����L�����𔻒肷��
+    /// ループ再生が有効かを判定する
     virtual bool isLoop() = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief		���[�v�̈�̐ݒ�
+    //  @brief		ループ領域の設定
     //
-    //  @param[in]  begin_  : ���[�v�̈�̐擪�ʒu ( �T���v�����P�� )
-    //  @param[in]  length_ : ���[�v�̈撷�� ( �T���v�����P�� )
+    //  @param[in]  begin_  : ループ領域の先頭位置 ( サンプル数単位 )
+    //  @param[in]  length_ : ループ領域長さ ( サンプル数単位 )
     //
     //  @par
-    //              begin_ �� length_ �� 0 ��ݒ肷��ƑS�̂����[�v�̈�ɂȂ�܂��B
+    //              begin_ と length_ に 0 を設定すると全体がループ領域になります。
     //*/
     //---------------------------------------------------------------------
 	virtual void setLoopState( u32 begin_, u32 length_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �Đ�
+    //  @brief      再生
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT play() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ��~
+    //  @brief      停止
     //*/
     //---------------------------------------------------------------------
 	virtual void stop() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �ꎞ��~
+    //  @brief      一時停止
     //
-    //  @param[in]  is_pause_ : true �̏ꍇ�ꎞ��~���� (��������ɂ� false ��n���܂�)
+    //  @param[in]  is_pause_ : true の場合一時停止する (解除するには false を渡します)
     //*/
     //---------------------------------------------------------------------
 	virtual void pause( bool is_pause_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���ʂ̃t�F�[�h
+    //  @brief      音量のフェード
     //
-    //  @param[in]  target_volume_ : �ύX��̉���
-    //  @param[in]  time_          : �t�F�[�h�ɂ����鎞�� (�~���b)
-    //  @param[in]  state_         : �t�F�[�h������̓���̎w��					
+    //  @param[in]  target_volume_ : 変更先の音量
+    //  @param[in]  time_          : フェードにかける時間 (ミリ秒)
+    //  @param[in]  state_         : フェード完了後の動作の指定					
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT fadeVolume( int target_volume_, int time_, LNSoundFadeState state_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �������𔻒肷��
+    //  @brief		3D 音源かを判定する
     //*/
     //---------------------------------------------------------------------
     virtual bool is3DSound() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �����Ƃ��Ă̈ʒu��ݒ肷��
+    //  @brief		3D 音源としての位置を設定する
     //
-    //  @param[in]  pos_ : �ʒu
+    //  @param[in]  pos_ : 位置
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT setPosition( const LVector3& pos_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �����Ƃ��Ă̈ʒu���擾����
+    //  @brief		3D 音源としての位置を取得する
     //*/
     //---------------------------------------------------------------------
     virtual const LVector3& getPosition() = 0;
 
-    /// ���x�̐ݒ�
+    /// 速度の設定
     virtual void setVelocity( const LVector3& pos_ ) = 0;
 
-    /// ���������̐ݒ�
+    /// 減衰距離の設定
     virtual void setMaxDistance( lnfloat distance ) = 0;
 
-    /// �����Ɏ����Ă��鉹���Đ��N���X�̎擾
+    /// 内部に持っている音声再生クラスの取得
     virtual IAudioPlayer* getAudioPlayer() = 0;
 
 	virtual void setGroupFlag( u32 flag_ ) = 0;
@@ -433,10 +433,10 @@ protected:
 
 
 //=============================================================================
-// �� IAudioDevice �N���X
+// ■ IAudioDevice クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �I�[�f�B�I�̊Ǘ��N���X�̃C���^�[�t�F�[�X
+//  @brief      オーディオの管理クラスのインターフェース
 //*/
 //=============================================================================
 class IAudioDevice
@@ -444,16 +444,16 @@ class IAudioDevice
 {
 public:
 
-    /// IAudioPlayer ���쐬���� (type_ �� LN_SOUNDPLAYTYPE_AUTO �͎w��ł��Ȃ��̂Œ���)
+    /// IAudioPlayer を作成する (type_ に LN_SOUNDPLAYTYPE_AUTO は指定できないので注意)
     virtual LNRESULT createAudioPlayer( IAudioPlayer** obj_, IAudioSource* source_, bool enable_3d_, LNSoundPlayType type_ ) = 0;
 
-    /// 3D�T�E���h���X�i�[�̎擾
+    /// 3Dサウンドリスナーの取得
     virtual LN3DSoundListener* get3DSoundListener() = 0;
 
-    /// �X�V (�X�V�X���b�h����Ă΂��)
+    /// 更新 (更新スレッドから呼ばれる)
     virtual void update() = 0;
 
-    /// 3D ��Ԃ�1���[�g�������̋����̐ݒ�
+    /// 3D 空間の1メートル相当の距離の設定
     virtual lnfloat setMetreUnitDistance( lnfloat d ) = 0;
 
 protected:
@@ -463,10 +463,10 @@ protected:
 };
 
 //=============================================================================
-// �� IResourceManager �N���X
+// ■ IResourceManager クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �������\�[�X�Ǘ��̃C���^�[�t�F�C�X
+//  @brief      音声リソース管理のインターフェイス
 //*/
 //=============================================================================
 class IResourceManager
@@ -476,41 +476,41 @@ public:
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �L�[�ɑΉ�����I�[�f�B�I�\�[�X����������
+    //  @brief      キーに対応するオーディオソースを検索する
     //
-    //  @param[out] obj_ : ���������I�[�f�B�I�\�[�X�̃|�C���^���i�[����ϐ��̃A�h���X ( ������Ȃ������ꍇ�� NULL ���i�[����܂� )
-    //  @param[in]  key_ : �����Ɏg���L�[�N���X
+    //  @param[out] obj_ : 見つかったオーディオソースのポインタを格納する変数のアドレス ( 見つからなかった場合は NULL が格納されます )
+    //  @param[in]  key_ : 検索に使うキークラス
     //
     //  @par
-    //              ���������ꍇ�͎Q�ƃJ�E���g���ЂƂ��₵�ĕԂ��܂��B
+    //              見つかった場合は参照カウントをひとつ増やして返します。
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT findAudioSource( IAudioSource** obj_, Base::SharingKey key_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �I�[�f�B�I�\�[�X�̍쐬
+    //  @brief      オーディオソースの作成
     //
-    //  @param[out] obj_    : �쐬�����I�[�f�B�I�\�[�X�̃|�C���^���i�[����ϐ��̃A�h���X
-    //  @param[in]  stream_ : ���̓X�g���[��
-    //  @param[in]  key_    : �����f�[�^�����L���鎞�Ɏg���L�[
+    //  @param[out] obj_    : 作成したオーディオソースのポインタを格納する変数のアドレス
+    //  @param[in]  stream_ : 入力ストリーム
+    //  @param[in]  key_    : 音声データを共有する時に使うキー
     //
     //  @par
-    //              �쐬�ł����ꍇ�Astream_ �� AudioSource �ɂ���ĎQ�Ƃ���A
-    //              �Q�ƃJ�E���g���ЂƂ����܂��B
+    //              作成できた場合、stream_ は AudioSource によって参照され、
+    //              参照カウントがひとつ増えます。
     //              <br>
-    //              ����ɍ쐬�ł����ꍇ�Astream_ �̃t�@�C���|�C���^�͐擪�ɖ߂�܂��B<br>
+    //              正常に作成できた場合、stream_ のファイルポインタは先頭に戻ります。<br>
     //
     //  @attention
-    //              �L�[���w�肷��ꍇ�͕K�� findAudioSource() �ŁA���łɑ��݂��Ă��邩
-    //              �`�F�b�N���Ă��������B�d������������ƃ��������[�N���܂��B
+    //              キーを指定する場合は必ず findAudioSource() で、すでに存在しているか
+    //              チェックしてください。重複が発生するとメモリリークします。
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT createAudioSource( IAudioSource** obj_, File::IInStream* stream_, Base::SharingKey key_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �L���b�V�����N���A����
+    //  @brief      キャッシュをクリアする
     //*/
     //---------------------------------------------------------------------
     virtual void clearCache() = 0;
@@ -521,10 +521,10 @@ protected:
 };
 
 //=============================================================================
-// �� IAudioPlayer �N���X
+// ■ IAudioPlayer クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �����Đ��N���X�̃C���^�[�t�F�[�X
+//  @brief      音声再生クラスのインターフェース
 //*/
 //=============================================================================
 class IAudioPlayer
@@ -532,131 +532,131 @@ class IAudioPlayer
 {
 public:
 
-    /// IAudioSource �̎擾
+    /// IAudioSource の取得
 	virtual IAudioSource* getAudioSource() const = 0;
 
-	/// ���ʂ̎擾
+	/// 音量の取得
 	virtual int getVolume() const = 0;
 
-	/// ���ʂ̐ݒ�
+	/// 音量の設定
 	virtual LNRESULT setVolume( int volume_ ) = 0;
 
-	/// �s�b�`�̎擾
+	/// ピッチの取得
 	virtual int getPitch() const = 0;
 
-	/// �s�b�`�̐ݒ�
+	/// ピッチの設定
 	virtual LNRESULT setPitch( int pitch_ ) = 0;
 
-    /// �Đ������T���v�����̎擾 ( Midi �̏ꍇ�̓~���[�W�b�N�^�C�� )
+    /// 再生したサンプル数の取得 ( Midi の場合はミュージックタイム )
     virtual u64 getPlayedSamples() const = 0;
 
-    /// �Đ������� (�폜�\��)
+    /// 再生中判定 (削除予定)
 	virtual bool isPlaying() const = 0;
 
-	// �ꎞ��~������ (�폜�\��)
+	// 一時停止中判定 (削除予定)
 	virtual bool isPausing() const = 0;
 
-    /// �Đ���Ԃ̎擾
+    /// 再生状態の取得
     virtual LNSoundPlayState getPlayState() const = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���[�v�Đ��̗L���ݒ�
+    //  @brief      ループ再生の有効設定
     //
-    //  @param[in]  loop_ : ���[�v�Đ�����ꍇ�Atrue ��ݒ肷��
+    //  @param[in]  loop_ : ループ再生する場合、true を設定する
     //*/
     //---------------------------------------------------------------------
 	virtual void loop( bool loop_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���[�v�Đ����L�����𔻒肷��
+    //  @brief      ループ再生が有効かを判定する
     //*/
     //---------------------------------------------------------------------
 	virtual bool isLoop() = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ���[�v���̐ݒ�
+    //  @brief      ループ情報の設定
     //
-    //  @param[in]  loop_begin_  : ���[�v�����̈�̍ŏ��̃T���v��
-    //  @param[in]  loop_length_ : ���[�v�̈�̒��� (�T���v�����P��)
+    //  @param[in]  loop_begin_  : ループされる領域の最初のサンプル
+    //  @param[in]  loop_length_ : ループ領域の長さ (サンプル数単位)
     //   
     //  @par
-    //              �S�̂����[�v�Đ�����ꍇ�� loop_begin_ �� loop_length_ ��
-    //              0 ��ݒ肵�Ă��������B
+    //              全体をループ再生する場合は loop_begin_ と loop_length_ に
+    //              0 を設定してください。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT setLoopState( u32 loop_begin_, u32 loop_length_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief		�Đ�
+    //  @brief		再生
     //
     //  @note
-    //              �E�擪����J�n			<br>
-    //              �E�|�[�Y����			<br>
-    //              �E�t�F�[�h��ԏ�����	<br>
+    //              ・先頭から開始			<br>
+    //              ・ポーズ解除			<br>
+    //              ・フェード状態初期化	<br>
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT play() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ��~
+    //  @brief      停止
     // 
     //  @note
-    //              �E�|�[�Y����
+    //              ・ポーズ解除
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT stop() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		�ꎞ��~
+    //  @brief		一時停止
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT pause( bool is_pause_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      �|�[�����O�X�V
+    //  @brief      ポーリング更新
     // 
     //  @par
-    //              �Đ��I��(��~)���Ă���ꍇ�� true ��Ԃ��܂��B
-    //              ���[�v�Đ��̏ꍇ�͏�� true ��Ԃ��܂��B
+    //              再生終了(停止)している場合は true を返します。
+    //              ループ再生の場合は常に true を返します。
     //*/
     //---------------------------------------------------------------------
 	virtual bool polling() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �������𔻒肷��
+    //  @brief		3D 音源かを判定する
     //*/
     //---------------------------------------------------------------------
     virtual bool is3DSound() = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �����Ƃ��Ă̈ʒu��ݒ肷��
+    //  @brief		3D 音源としての位置を設定する
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT setPosition( const LVector3& pos_ ) = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D �����Ƃ��Ă̈ʒu���擾����
+    //  @brief		3D 音源としての位置を取得する
     //*/
     //---------------------------------------------------------------------
     virtual const LVector3& getPosition() = 0;
 
-    /// ���x�̐ݒ�
+    /// 速度の設定
     virtual void setVelocity( const LVector3& v ) = 0;
 
-    /// 3D �����̉e���͈� (���̓͂�����) �̐ݒ�
+    /// 3D 音源の影響範囲 (音の届く距離) の設定
     virtual void setEmitterDistance( lnfloat distance_ ) = 0;
 
-    /// 3D �����̉e���͈� (���̓͂�����) �̎擾
+    /// 3D 音源の影響範囲 (音の届く距離) の取得
     virtual lnfloat getEmitterDistance() const = 0;
 
 public:
@@ -666,10 +666,10 @@ public:
 
 
 //=============================================================================
-// �� IAudioSource �N���X
+// ■ IAudioSource クラス
 //-----------------------------------------------------------------------------
 ///**
-//  @brief      �����f�[�^�̃C���^�[�t�F�C�X
+//  @brief      音声データのインターフェイス
 //*/
 //=============================================================================
 class IAudioSource
@@ -677,135 +677,135 @@ class IAudioSource
 {
 public:
 
-	/// �t�@�C���t�H�[�}�b�g�̎擾
+	/// ファイルフォーマットの取得
 	virtual LNAudioSourceFormat getSourceFormat() const = 0;
 
-	/// PCM �t�H�[�}�b�g�̎擾
+	/// PCM フォーマットの取得
 	virtual const LNWaveFormat* getWaveFormat() const = 0;
 
-	/// ���f�[�^�̃T�C�Y�̎擾 ( �X�g���[�~���O�Đ��ł̏I�����蓙�Ŏg�� )
+	/// 元データのサイズの取得 ( ストリーミング再生での終了判定等で使う )
 	virtual u32 getSourceDataSize() const = 0;
 
-	/// �S�̂̍Đ����Ԃ̎擾 ( �~���b ��Ŗ����Ȃ邩�� )
+	/// 全体の再生時間の取得 ( ミリ秒 後で無くなるかも )
 	virtual u32 getTotalTime() const = 0;
 
-    /// �S�̂̃T���v�����̎擾 ( Midi �̏ꍇ�̓~���[�W�b�N�^�C���P�� )
+    /// 全体のサンプル数の取得 ( Midi の場合はミュージックタイム単位 )
 	virtual u32 getTotalUnits() const = 0;
 
-	/// �I���������Đ��p�̃o�b�t�@�̐擪�A�h���X�擾 ( fillBufferAndReleaseStream() ���Ă�ł��Ȃ��ꍇ�� NULL )
+	/// オンメモリ再生用のバッファの先頭アドレス取得 ( fillBufferAndReleaseStream() を呼んでいない場合は NULL )
 	virtual u8* getOnmemoryPCMBuffer() const = 0;
 
-	/// �I���������Đ����̑S�o�b�t�@�T�C�Y�̎擾
+	/// オンメモリ再生時の全バッファサイズの取得
 	virtual u32 getOnmemoryPCMBufferSize() const = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //	@brief      1 �b������̃o�C�g���擾
+    //	@brief      1 秒あたりのバイト数取得
     //
     //	@note
-    //              �ʏ�� PCM �t�H�[�}�b�g����擾�ł��邯�ǁAMP3 �̏ꍇ��
-    //              API �̓s��(?)��A�f�R�[�h�ɍœK�� 1 �b���̃T�C�Y�́A
-    //              ���ʂ�PCM�̂���Ƃ͈قȂ�B
-    //              ���̂��߁A�����ƃ`�F�b�N�ł���悤�ɂ��̃��\�b�h��p�ӁB
-    //              ���܂̂Ƃ���� MP3 �Ɍ������b�����ǁAgetWaveFormat() ��
-    //              �擾�����l���� 1 �b���̃T�C�Y���v�Z����ƃo�O�̂Œ��ӁB
+    //              通常は PCM フォーマットから取得できるけど、MP3 の場合は
+    //              API の都合(?)上、デコードに最適な 1 秒分のサイズは、
+    //              普通のPCMのそれとは異なる。
+    //              そのため、ちゃんとチェックできるようにこのメソッドを用意。
+    //              いまのところは MP3 に限った話だけど、getWaveFormat() で
+    //              取得した値から 1 秒分のサイズを計算するとバグので注意。
     //*/
     //---------------------------------------------------------------------
 	virtual u32 getBytesPerSec() const = 0;
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ���[�v�J�n�ʒu�ƏI���ʒu�̎擾
+    //  @brief      ループ開始位置と終了位置の取得
     //
     //  @par
-    //              Midi �t�@�C���̏ꍇ�͍ŏ��� CC111 �ʒu�̃f���^�^�C���ƃx�[�X�^�C��
+    //              Midi ファイルの場合は最初の CC111 位置のデルタタイムとベースタイム
     //*/
     //---------------------------------------------------------------------
 	virtual void getLoopState( u32* begin_, u32* length_ ) const = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �I�[�f�B�I�t�@�C���Ƃ��Ĉ����X�g���[����ݒ肷��
+    //  @brief      オーディオファイルとして扱うストリームを設定する
     //
     //  @par
-    //              �󂯎�����X�g���[���͎Q�ƃJ�E���g���ЂƂ����A
-    //              �C���X�^���X���������邩 fillBuffer() ���Ă΂��܂ŕێ�����܂��B
-    //              (������ꂽ�Ƃ��ɎQ�ƃJ�E���g���f�N�������g)
+    //              受け取ったストリームは参照カウントがひとつ増え、
+    //              インスタンスが解放されるか fillBuffer() が呼ばれるまで保持されます。
+    //              (解放されたときに参照カウントをデクリメント)
     //*/
     //---------------------------------------------------------------------
     virtual LNRESULT setStream( File::IInStream* stream_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �I���������Đ��p�ɑS�Ẵf�[�^��ǂݍ���
+    //  @brief      オンメモリ再生用に全てのデータを読み込む
     //
     //  @par
-    //              �f�R�[�h��� PCM �f�[�^�T�C�Y���̃o�b�t�@������Ŋm�ۂ��A
-    //              �����ɑS�Ẵf�[�^��ǂݍ��݂܂��B
-    //              �f�[�^�y�уT�C�Y�� getOnmemoryPCMBuffer()�A
-    //              getOnmemoryPCMBufferSize() �Ŏ擾���Ă��������B<br>
+    //              デコード後の PCM データサイズ分のバッファを内部で確保し、
+    //              そこに全てのデータを読み込みます。
+    //              データ及びサイズは getOnmemoryPCMBuffer()、
+    //              getOnmemoryPCMBufferSize() で取得してください。<br>
     //              <br>
-    //              ������Ă΂�Ă��A���łɃo�b�t�@���m�ۂ���Ă���ꍇ��
-    //              �Ȃɂ����܂���B<br>
+    //              複数回呼ばれても、すでにバッファが確保されている場合は
+    //              なにもしません。<br>
     //              <br>
-    //              �ďo����A�X�g���[���͉������A���̃I�[�f�B�I�\�[�X��
-    //              �X�g���[�~���O�Đ��ɂ͎g�p�ł��Ȃ��Ȃ�܂��B<br>
+    //              呼出し後、ストリームは解放され、このオーディオソースは
+    //              ストリーミング再生には使用できなくなります。<br>
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT fillBufferAndReleaseStream() = 0;
 
-    /// fillBufferAndReleaseStream() �X���b�h�Z�[�t
+    /// fillBufferAndReleaseStream() スレッドセーフ
     virtual void fillBufferSafe() = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �f�[�^���f�R�[�h���Abuffer_ �ɏ�������
+    //  @brief      データをデコードし、buffer_ に書き込む
     //
-    //  @param[out] buffer_         : PCM �f�[�^���������ރo�b�t�@
-    //  @param[in]  buffer_size_    : buffer_ �̃T�C�Y ( �o�C�g�P�� )
-    //  @param[out] read_size_      : �\�[�X�f�[�^����ǂݍ��񂾃f�[�^�T�C�Y
-    //  @param[out] write_size_     : ���ۂ� buffer_ �ɏ������񂾃T�C�Y
+    //  @param[out] buffer_         : PCM データを書き込むバッファ
+    //  @param[in]  buffer_size_    : buffer_ のサイズ ( バイト単位 )
+    //  @param[out] read_size_      : ソースデータから読み込んだデータサイズ
+    //  @param[out] write_size_     : 実際に buffer_ に書き込んだサイズ
     //
     //  @par
-    //              �ł��邾�� buffer_size_ �𖞂����悤�Ƀf�[�^���f�R�[�h���A
-    //              buffer_ �������݂܂��B
-    //              �ʏ�Abuffer_size_ �� getBytesPerSec() �Ɠ����l�ł��B<br>
+    //              できるだけ buffer_size_ を満たすようにデータをデコードし、
+    //              buffer_ 書き込みます。
+    //              通常、buffer_size_ は getBytesPerSec() と同じ値です。<br>
     //              <br>
-    //              read_size_ �̓f�R�[�h�ׂ̈Ƀ\�[�X����ǂݍ��񂾃f�[�^�T�C�Y�ł��B
-    //              �ʏ�Amp3 ���̈��k�t�H�[�}�b�g�ł� write_size_ �����������l�ɂȂ�܂��B
-    //              ���݂̃t�@�C���|�C���^�� read_size_ �̒l�𑫂����l���A
-    //              ����̓ǂݍ��݈ʒu�ƂȂ�܂��B<br>
+    //              read_size_ はデコードの為にソースから読み込んだデータサイズです。
+    //              通常、mp3 等の圧縮フォーマットでは write_size_ よりも小さい値になります。
+    //              現在のファイルポインタに read_size_ の値を足した値が、
+    //              次回の読み込み位置となります。<br>
     //              <br>
-    //              write_size_ �́A�ʏ�� buffer_size_ �Ɠ����l�ł����A
-    //              �t�@�C���I�[�Ȃǂł� buffer_size_ �����������l ( �����f�[�^������Ƃ���܂� )
-    //              �ɂȂ�܂��B	
+    //              write_size_ は、通常は buffer_size_ と同じ値ですが、
+    //              ファイル終端などでは buffer_size_ よりも小さい値 ( 音声データがあるところまで )
+    //              になります。	
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT read( void* buffer_, u32 buffer_size_, u32* read_size_, u32* write_size_ ) = 0;
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �t�@�C���|�C���^�ړ�
+    //  @brief      ファイルポインタ移動
     //
-    //  @param[in]  offset_ : �ړ��� ( �o�C�g�P�� )
+    //  @param[in]  offset_ : 移動量 ( バイト単位 )
     //
     //  @par
-    //              �\�[�X�f�[�^�̐擪���� offset_ ���ړ������Ƃ���ɐݒ肵�܂��B
+    //              ソースデータの先頭から offset_ 分移動したところに設定します。
     //*/
     //---------------------------------------------------------------------
 	virtual LNRESULT seek( u32 offset_ ) = 0;
 
-    /// seek + reed + �X���b�h�Z�[�t
+    /// seek + reed + スレッドセーフ
     virtual void readSafe( void* buffer_, u32 buffer_size_, u32 offset_, u32* read_size_, u32* write_size_ ) = 0;
 
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      �f�R�[�h��Ԃ̃��Z�b�g
+    //  @brief      デコード状態のリセット
     //
     //  @note
-    //              �V�����Đ����J�n����O�ɌĂԂ��ƁB
-    //              mp3 �̃\�[�X�N���X�Ŏ��������B
+    //              新しく再生を開始する前に呼ぶこと。
+    //              mp3 のソースクラスで実装される。
     //*/
     //---------------------------------------------------------------------
 	virtual void reset() = 0;

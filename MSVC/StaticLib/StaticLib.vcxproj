@@ -51,15 +51,19 @@
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\PropertySheet.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup>
@@ -158,6 +162,8 @@
   <ItemGroup>
     <ClInclude Include="..\..\LNote\Core\Game\Component\VisualModelComponent.h" />
     <ClInclude Include="..\..\LNote\Core\Game\GameObjectManager.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Camera.h" />
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\ScreenEffect.h" />
     <ClInclude Include="..\..\LNote\Core\Math\Asm.h" />
     <ClInclude Include="..\..\LNote\Core\Math\Enum.h" />
     <ClInclude Include="..\..\LNote\Core\Math\Math.h" />
@@ -410,6 +416,8 @@
   <ItemGroup>
     <ClCompile Include="..\..\LNote\Core\Game\Component\VisualModelComponent.cpp" />
     <ClCompile Include="..\..\LNote\Core\Game\GameObjectManager.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Camera_graphics.cpp" />
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\ScreenEffect.cpp" />
     <ClCompile Include="..\..\LNote\Core\Math\Math.cpp" />
     <ClCompile Include="..\..\LNote\Core\Math\Random.cpp" />
     <ClCompile Include="..\..\LNote\Core\Base\Error.cpp" />

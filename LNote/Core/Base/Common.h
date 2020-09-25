@@ -1,5 +1,5 @@
-//=============================================================================
-//Åy Common Åz
+Ôªø//=============================================================================
+//„Äê Common „Äë
 //-----------------------------------------------------------------------------
 ///**
 //  @file       Common.h
@@ -16,31 +16,31 @@
 namespace LNote
 {
 
-/// åãâ ÅEÉGÉâÅ[ÉRÅ[Éh
+/// ÁµêÊûú„Éª„Ç®„É©„Éº„Ç≥„Éº„Éâ
 enum LNResultCode
 {
     LN_OK                   = 0,
     LN_FALSE                = 1,
-    LN_HANDLED              = 0x00042002,    ///< èàóùçœÇ› (OSÉÅÉbÉZÅ[ÉWÅEGUI ópÅBçÌèúó\íË)
+    LN_HANDLED              = 0x00042002,    ///< Âá¶ÁêÜÊ∏à„Åø (OS„É°„ÉÉ„Çª„Éº„Ç∏„ÉªGUI Áî®„ÄÇÂâäÈô§‰∫àÂÆö)
 
-    LN_ERR_ASSERT           = 0x80042001,   ///< åxçê (LN_ASSERT)
-    LN_ERR_INVALIDCALL      = 0x80042002,   ///< ä÷êîÇÃà¯êîÇ™ñ≥å¯
-    LN_ERR_OUTOFMEMORY      = 0x80042003,   ///< ÉÅÉÇÉäïsë´
-    LN_ERR_INDEX            = LN_ERR_INVALIDCALL,   ///< îzóÒäOéQè∆ (LN_ERR_INVALIDCALL Ç…ìùçáó\íË)
-    LN_ERR_NULLPOINTER      = 0x80042005,   ///< NULL ÉAÉNÉZÉX
-    LN_ERR_FILENOTFOUND     = 0x80042006,   ///< ÉtÉ@ÉCÉãÇ™ñ≥å¯
-    LN_ERR_SYSTEM           = 0x80042007,   ///< ÉVÉXÉeÉÄ API åƒÇ—èoÇµÉGÉâÅ[
-    LN_ERR_INITIALIZED      = 0x80042009,   ///< èâä˙âªçœÇ›
-    LN_ERR_NOINITIALIZE     = 0x8004200a,   ///< èâä˙âªÇ≥ÇÍÇƒÇ¢Ç»Ç¢
-    LN_ERR_FORMAT           = 0x8004200b,   ///< îÒëŒâûÉtÉ@ÉCÉãå`éÆ
-    LN_ERR_NOTIMPL          = 0x8004200c,   ///< é¿ëïÇ≥ÇÍÇƒÇ¢Ç»Ç¢ã@î\ÇåƒÇ—èoÇªÇ§Ç∆ÇµÇΩ
-    LN_ERR_FATAL            = 0x8004200d,   ///< åpë±ïsî\Ç»ÉGÉâÅ[
-    LN_ERR_DIRECTX          = 0x8004200e,   ///< DirectX ä÷åWÇÃÉGÉâÅ[
-    LN_ERR_OPENGL           = 0x8004200f,   ///< OpenGL ä÷åWÇÃÉGÉâÅ[
+    LN_ERR_ASSERT           = 0x80042001,   ///< Ë≠¶Âëä (LN_ASSERT)
+    LN_ERR_INVALIDCALL      = 0x80042002,   ///< Èñ¢Êï∞„ÅÆÂºïÊï∞„ÅåÁÑ°Âäπ
+    LN_ERR_OUTOFMEMORY      = 0x80042003,   ///< „É°„É¢„É™‰∏çË∂≥
+    LN_ERR_INDEX            = LN_ERR_INVALIDCALL,   ///< ÈÖçÂàóÂ§ñÂèÇÁÖß (LN_ERR_INVALIDCALL „Å´Áµ±Âêà‰∫àÂÆö)
+    LN_ERR_NULLPOINTER      = 0x80042005,   ///< NULL „Ç¢„ÇØ„Çª„Çπ
+    LN_ERR_FILENOTFOUND     = 0x80042006,   ///< „Éï„Ç°„Ç§„É´„ÅåÁÑ°Âäπ
+    LN_ERR_SYSTEM           = 0x80042007,   ///< „Ç∑„Çπ„ÉÜ„É† API Âëº„Å≥Âá∫„Åó„Ç®„É©„Éº
+    LN_ERR_INITIALIZED      = 0x80042009,   ///< ÂàùÊúüÂåñÊ∏à„Åø
+    LN_ERR_NOINITIALIZE     = 0x8004200a,   ///< ÂàùÊúüÂåñ„Åï„Çå„Å¶„ÅÑ„Å™„ÅÑ
+    LN_ERR_FORMAT           = 0x8004200b,   ///< ÈùûÂØæÂøú„Éï„Ç°„Ç§„É´ÂΩ¢Âºè
+    LN_ERR_NOTIMPL          = 0x8004200c,   ///< ÂÆüË£Ö„Åï„Çå„Å¶„ÅÑ„Å™„ÅÑÊ©üËÉΩ„ÇíÂëº„Å≥Âá∫„Åù„ÅÜ„Å®„Åó„Åü
+    LN_ERR_FATAL            = 0x8004200d,   ///< Á∂ôÁ∂ö‰∏çËÉΩ„Å™„Ç®„É©„Éº
+    LN_ERR_DIRECTX          = 0x8004200e,   ///< DirectX Èñ¢‰øÇ„ÅÆ„Ç®„É©„Éº
+    LN_ERR_OPENGL           = 0x8004200f,   ///< OpenGL Èñ¢‰øÇ„ÅÆ„Ç®„É©„Éº
 
     LN_ERR_COM  = LN_ERR_DIRECTX,
 
-    // Å¶ÉRÉìÉoÅ[É^Ç≈ÇÃïœä∑Çóeà’Ç…Ç∑ÇÈÇΩÇﬂÅAMAKE_HRESULT Ç≈ÇÕÇ»Ç≠íºílÇ≈éwíË
+    // ‚Äª„Ç≥„É≥„Éê„Éº„Çø„Åß„ÅÆÂ§âÊèõ„ÇíÂÆπÊòì„Å´„Åô„Çã„Åü„ÇÅ„ÄÅMAKE_HRESULT „Åß„ÅØ„Å™„ÅèÁõ¥ÂÄ§„ÅßÊåáÂÆö
 };
 
 } // namespace LNote

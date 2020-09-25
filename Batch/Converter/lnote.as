@@ -30,29 +30,27 @@
 //-----------------------------------------------------------------------------
 //
 //-----------------------------------------------------------------------------
-#func __LAudio_Init "LAudio_Init"
-#define LAudio_Init _LAudio_Init
-#func __LAudio_PlayBGM "LAudio_PlayBGM" str, int, int, int
+#func __LAudio_PlayBGM "LAudio_PlayBGM" int, int, int, int
 #define LAudio_PlayBGM(%1, %2=100, %3=100, %4=0) _LAudio_PlayBGM %1, %2, %3, %4
 #func  _LAudio_PlayBGMMem "LAudio_PlayBGMMem" var, int, int, int, int
 #define LAudio_PlayBGMMem(%1, %2, %3=100, %4=100, %5=0) _LAudio_PlayBGMMem %1, %2, %3, %4, %5
 #func  _LAudio_StopBGM "LAudio_StopBGM" int
 #define LAudio_StopBGM(%1=0) _LAudio_StopBGM %1
-#func __LAudio_PlayBGS "LAudio_PlayBGS" str, int, int, int
+#func __LAudio_PlayBGS "LAudio_PlayBGS" int, int, int, int
 #define LAudio_PlayBGS(%1, %2=100, %3=100, %4=0) _LAudio_PlayBGS %1, %2, %3, %4
 #func  _LAudio_PlayBGSMem "LAudio_PlayBGSMem" var, int, int, int, int
 #define LAudio_PlayBGSMem(%1, %2, %3=100, %4=100, %5=0) _LAudio_PlayBGSMem %1, %2, %3, %4, %5
 #func  _LAudio_StopBGS "LAudio_StopBGS" int
 #define LAudio_StopBGS(%1=0) _LAudio_StopBGS %1
-#func __LAudio_PlayME "LAudio_PlayME" str, int, int
+#func __LAudio_PlayME "LAudio_PlayME" int, int, int
 #define LAudio_PlayME(%1, %2=100, %3=100) _LAudio_PlayME %1, %2, %3
 #func  _LAudio_PlayMEMem "LAudio_PlayMEMem" var, int, int, int
 #define LAudio_PlayMEMem(%1, %2, %3=100, %4=100) _LAudio_PlayMEMem %1, %2, %3, %4
 #func  _LAudio_StopME "LAudio_StopME"
 #define LAudio_StopME _LAudio_StopME
-#func __LAudio_PlaySE "LAudio_PlaySE" str, int, int
+#func __LAudio_PlaySE "LAudio_PlaySE" int, int, int
 #define LAudio_PlaySE(%1, %2=100, %3=100) _LAudio_PlaySE %1, %2, %3
-#func __LAudio_PlaySE3D "LAudio_PlaySE3D" str, float, float, float, float, int, int
+#func __LAudio_PlaySE3D "LAudio_PlaySE3D" int, float, float, float, float, int, int
 #define LAudio_PlaySE3D(%1, %2, %3, %4, %5, %6=100, %7=100) _LAudio_PlaySE3D %1, %2, %3, %4, %5, %6, %7
 #func  _LAudio_PlaySEMem "LAudio_PlaySEMem" var, int, int, int
 #define LAudio_PlaySEMem(%1, %2, %3=100, %4=100) _LAudio_PlaySEMem %1, %2, %3, %4
@@ -72,7 +70,7 @@
 #define L3DSoundListener_Velocity(%1, %2, %3) _L3DSoundListener_Velocity %1, %2, %3
 #func  _LSound_CreateMem "LSound_CreateMem" var, int, int
 #define LSound_CreateMem(%1, %2, %3=false) _LSound_CreateMem %1, %2, %3
-#func  _LSound_Load "LSound_LoadToPtr" var, str, int, int
+#func  _LSound_Load "LSound_LoadToPtr" var, int, int, int
 #define LSound_Load(%1, %2, %3=false, %4=LN_SOUNDPLAYTYPE_AUTO) _LSound_Load %1, %2, %3, %4
 #func  _LSound_Release "LSound_Release" int
 #define LSound_Release(%1) _LSound_Release %1
@@ -120,6 +118,10 @@
 #define LConfig_SetUserWindowHandle(%1) _LConfig_SetUserWindowHandle %1
 #func  _LConfig_SetDirectMusicUsingMode "LConfig_SetDirectMusicUsingMode" int
 #define LConfig_SetDirectMusicUsingMode(%1) _LConfig_SetDirectMusicUsingMode %1
+#func __LNote_InitAudio "LNote_InitAudio"
+#define LNote_InitAudio _LNote_InitAudio
+#func  _LNote_End "LNote_End"
+#define LNote_End _LNote_End
 
 #const LN_OK 0
 #const LN_FALSE 1
@@ -139,23 +141,6 @@
 #const LN_ERR_DIRECTX 0x8004200e
 #const LN_ERR_OPENGL 0x8004200f
 #const LN_ERR_COM LN_ERR_DIRECTX
-#const LN_SOUNDPLAYTYPE_AUTO 0
-#const LN_SOUNDPLAYTYPE_ONMEMORY 1
-#const LN_SOUNDPLAYTYPE_STREAMING 2
-#const LN_SOUNDPLAYTYPE_MIDI 3
-#const LN_SOUNDPLAYTYPE_UNKNOWN 0xffff
-#const LN_SOUNDPLAYSTATE_STOP 0
-#const LN_SOUNDPLAYSTATE_PLAYING 1
-#const LN_SOUNDPLAYSTATE_PAUSING 2
-#const LN_SOUNDFADE_CONTINUE 0
-#const LN_SOUNDFADE_STOP 1
-#const LN_SOUNDFADE_STOP_RESET 2
-#const LN_SOUNDFADE_PAUSE 3
-#const LN_SOUNDFADE_PAUSE_RESET 4
-#const LN_DMUSINGMODE_NOTUSE 0
-#const LN_DMUSINGMODE_USE 1
-#const LN_DMUSINGMODE_THREAD_WAIT 2
-#const LN_DMUSINGMODE_THREAD_REQUEST 3
 
 //-----------------------------------------------------------------------------
 // internal
@@ -168,7 +153,7 @@
 //-----------------------------------------------------------------------------
 #module "LNote"
 
-// LFile_ExistDirectoryOrEXE(stat: 0=Ç»Çµ 1=ÉfÉBÉåÉNÉgÉäÇ…ë∂ç›(óDêÊ) 2=EXEÇ…ë∂ç›)
+// LFile_ExistDirectoryOrEXE(stat: 0=„Å™„Åó 1=„Éá„Ç£„É¨„ÇØ„Éà„É™„Å´Â≠òÂú®(ÂÑ™ÂÖà) 2=EXE„Å´Â≠òÂú®)
 #deffunc LFile_ExistDirectoryOrEXE str p1
 	LFile_Exist@ p1
 	if stat != 0 : return 1

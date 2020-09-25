@@ -892,6 +892,12 @@
     <ClInclude Include="..\..\LNote\Core\Game\Component\VisualModelComponent.h">
       <Filter>Game\Component</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\ScreenEffect.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\LNote\Core\Graphics\Common\Camera.h">
+      <Filter>Graphics\Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\LNote\Core\Math\Math.cpp">
@@ -1461,6 +1467,12 @@
     </ClCompile>
     <ClCompile Include="..\..\LNote\Core\Game\Component\VisualModelComponent.cpp">
       <Filter>Game\Component</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\ScreenEffect.cpp">
+      <Filter>Graphics\Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\LNote\Core\Graphics\Common\Camera_graphics.cpp">
+      <Filter>Graphics\Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

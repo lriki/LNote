@@ -3,14 +3,14 @@
 #
 #==============================================================================
 class FuncDoc
-  attr_accessor :name           # ŠÖ”–¼
-  attr_accessor :summary        # ŠT—v
-  attr_accessor :param_pars     # ˆø”Ú×‚Ì”z—ñ (ParamPar ƒNƒ‰ƒX‚Ì”z—ñ)
-  attr_accessor :return_detail  # return à–¾
-  attr_accessor :detail         # Ú× (@par)
-  attr_accessor :option_args    # ƒIƒvƒVƒ‡ƒ“ˆø”‚Ì”z—ñ (OptArg ƒNƒ‰ƒX‚Ì”z—ñ)
-  attr_accessor :args           # ˆø”ƒŠƒXƒg (FuncArg ƒNƒ‰ƒX‚Ì”z—ñ)
-  attr_accessor :return_type    # –ß‚è’l‚ÌŒ^–¼
+  attr_accessor :name           # é–¢æ•°å
+  attr_accessor :summary        # æ¦‚è¦
+  attr_accessor :param_pars     # å¼•æ•°è©³ç´°ã®é…åˆ— (ParamPar ã‚¯ãƒ©ã‚¹ã®é…åˆ—)
+  attr_accessor :return_detail  # return èª¬æ˜
+  attr_accessor :detail         # è©³ç´° (@par)
+  attr_accessor :option_args    # ã‚ªãƒ—ã‚·ãƒ§ãƒ³å¼•æ•°ã®é…åˆ— (OptArg ã‚¯ãƒ©ã‚¹ã®é…åˆ—)
+  attr_accessor :args           # å¼•æ•°ãƒªã‚¹ãƒˆ (FuncArg ã‚¯ãƒ©ã‚¹ã®é…åˆ—)
+  attr_accessor :return_type    # æˆ»ã‚Šå€¤ã®å‹å
   def initialize
     @name = ""
     @summary = ""
@@ -20,7 +20,7 @@ class FuncDoc
     @option_args = []
     @args = []
   end
-  # ˆø”–¼‚©‚çƒfƒtƒHƒ‹ƒg’l‚ğæ“¾‚·‚é (–³‚¯‚ê‚Î nil)
+  # å¼•æ•°åã‹ã‚‰ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã‚’å–å¾—ã™ã‚‹ (ç„¡ã‘ã‚Œã° nil)
   def find_default_arg(arg_name)
     for a in args
       return a.default if a.name == arg_name
@@ -33,10 +33,10 @@ end
 #
 #==============================================================================
 class ParamPar
-  attr_accessor :io_type      # “üo—Í‚Ìí—Ş "[in]" "[out]" "[in,out]"
-  attr_accessor :caption      # ˆø”–¼
-  attr_accessor :detail       # à–¾ (':' ‚ğŠÜ‚Ş)
-  attr_accessor :arg_pars     # @arg •¶š—ñ”z—ñ "NAME : DETAIL"
+  attr_accessor :io_type      # å…¥å‡ºåŠ›ã®ç¨®é¡ "[in]" "[out]" "[in,out]"
+  attr_accessor :caption      # å¼•æ•°å
+  attr_accessor :detail       # èª¬æ˜ (':' ã‚’å«ã‚€)
+  attr_accessor :arg_pars     # @arg æ–‡å­—åˆ—é…åˆ— "NAME : DETAIL"
   def initialize
     @io_type = ""
     @caption = ""
@@ -49,9 +49,9 @@ end
 #
 #==============================================================================
 class FuncArg
-  attr_accessor :name         # ˆø”–¼
-  attr_accessor :default      # ƒfƒtƒHƒ‹ƒgˆø”
-  attr_accessor :type         # Œ^
+  attr_accessor :name         # å¼•æ•°å
+  attr_accessor :default      # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
+  attr_accessor :type         # å‹
   def initialize
     @name = ""
     @default = nil
@@ -63,8 +63,8 @@ end
 #
 #==============================================================================
 class OptArg
-  attr_accessor :name         # ˆø”–¼
-  attr_accessor :value        # ’l
+  attr_accessor :name         # å¼•æ•°å
+  attr_accessor :value        # å€¤
   def initialize(name, value)
     @name = name
     @value = value
@@ -75,8 +75,8 @@ end
 #
 #==============================================================================
 class EnumValue
-  attr_accessor :name         # ˆø”–¼
-  attr_accessor :value        # ’l
+  attr_accessor :name         # å¼•æ•°å
+  attr_accessor :value        # å€¤
   def initialize(name, value)
     @name = name
     @value = value
@@ -90,10 +90,10 @@ class Analyzer
   #----------------------------------------------------------------------------
   # 
   #----------------------------------------------------------------------------
-  attr_accessor :func_doc_list  # ‰ğÍŒ‹‰Ê‚Ì FuncDoc ”z—ñ
-  attr_accessor :enum_list      # ‰ğÍŒ‹‰Ê‚Ì EnumValue ”z—ñ
+  attr_accessor :func_doc_list  # è§£æçµæœã® FuncDoc é…åˆ—
+  attr_accessor :enum_list      # è§£æçµæœã® EnumValue é…åˆ—
   #----------------------------------------------------------------------------
-  # ‰Šú‰»
+  # åˆæœŸåŒ–
   #----------------------------------------------------------------------------
   def initialize
     @step = 0
@@ -106,13 +106,13 @@ class Analyzer
     @return_detail_analyzing = false
   end
   #----------------------------------------------------------------------------
-  # ‚Ğ‚Æ‚Â‚Ìƒtƒ@ƒCƒ‹‚ğ‰ğÍ‚·‚é
-  #     lang_name : ƒIƒvƒVƒ‡ƒ“ˆø”‚Ì‰ğÍ‚Ég—p‚·‚éŒ¾Œê–¼
+  # ã²ã¨ã¤ã®ãƒ•ã‚¡ã‚¤ãƒ«ã‚’è§£æã™ã‚‹
+  #     lang_name : ã‚ªãƒ—ã‚·ãƒ§ãƒ³å¼•æ•°ã®è§£æã«ä½¿ç”¨ã™ã‚‹è¨€èªå
   #----------------------------------------------------------------------------
   def analyze(filename, lang_name)
     @step = 0
     @lang_name = lang_name
-    # 1 s‚¸‚Â“Ç‚ñ‚Å‚¢‚­
+    # 1 è¡Œãšã¤èª­ã‚“ã§ã„ã
     file = open(filename)
     while text = file.gets do
       case @step
@@ -129,22 +129,22 @@ class Analyzer
     end
   end
   #----------------------------------------------------------------------------
-  # step0 ƒRƒƒ“ƒgŠJnˆÊ’uŒŸõ & ‰Šú‰»
+  # step0 ã‚³ãƒ¡ãƒ³ãƒˆé–‹å§‹ä½ç½®æ¤œç´¢ & åˆæœŸåŒ–
   #----------------------------------------------------------------------------
   def step0_init(text)
-    # \s+   :ƒXƒy[ƒXofƒ^ƒu‚ğ1‰ñˆÈã
-    # \/{3} :/ ‚ğ3‰ñ
-    # \*{2} :* ‚ğ2‰ñ
+    # \s+   :ã‚¹ãƒšãƒ¼ã‚¹ofã‚¿ãƒ–ã‚’1å›ä»¥ä¸Š
+    # \/{3} :/ ã‚’3å›
+    # \*{2} :* ã‚’2å›
     if text =~ /\s+\/{3}\*{2}/
       @cur_func_doc = FuncDoc.new
       @step = 1
     end
   end
   #----------------------------------------------------------------------------
-  # step1 doxy ƒRƒƒ“ƒg‰ğÍ
+  # step1 doxy ã‚³ãƒ¡ãƒ³ãƒˆè§£æ
   #----------------------------------------------------------------------------
   def step1_analyze_doc(text)
-    # doc I’[
+    # doc çµ‚ç«¯
     if text =~ /\s+\/{2}\*\//
       end_par_analyze
       @step = 2
@@ -153,7 +153,7 @@ class Analyzer
     # @brief
     if text =~ /\@brief\s+/
       end_par_analyze
-      @cur_func_doc.summary = $' # ÅŒã‚Éƒ}ƒbƒ`‚µ‚½‰ÓŠ‚ÌŒã
+      @cur_func_doc.summary = $' # æœ€å¾Œã«ãƒãƒƒãƒã—ãŸç®‡æ‰€ã®å¾Œ
       return
     end
     # @param
@@ -161,8 +161,8 @@ class Analyzer
       end_par_analyze
       @cur_param_par = ParamPar.new
       $' =~ /\[.+\]/
-      @cur_param_par.io_type = $&    # $& = ƒ}ƒbƒ`‚µ‚½‰ÓŠ
-      # "x, y, z" ‚Ìb’è‘ÎôB':' ‚Ì‘O‚Ü‚Å‚ğˆø”–¼‚Æ‚İ‚È‚·
+      @cur_param_par.io_type = $&    # $& = ãƒãƒƒãƒã—ãŸç®‡æ‰€
+      # "x, y, z" ã®æš«å®šå¯¾ç­–ã€‚':' ã®å‰ã¾ã§ã‚’å¼•æ•°åã¨ã¿ãªã™
       if $'.include?(":")
         $' =~ /:.+/
         @cur_param_par.caption = $`.strip
@@ -170,7 +170,7 @@ class Analyzer
       else
         $' =~ /\s+\S+\s+/
         @cur_param_par.caption = $&
-        @cur_param_par.caption.strip!  # ‘OŒã‚ÌƒXƒy[ƒX‚ğíœ
+        @cur_param_par.caption.strip!  # å‰å¾Œã®ã‚¹ãƒšãƒ¼ã‚¹ã‚’å‰Šé™¤
         @cur_param_par.detail = $'
       end
       @cur_func_doc.param_pars.push(@cur_param_par)
@@ -194,13 +194,13 @@ class Analyzer
       @func_detail_analyzing = true
       return
     end
-    # @par ‰ğÍ’†
+    # @par è§£æä¸­
     if @func_detail_analyzing
       text =~ /\/\/\s*/
       @cur_func_doc.detail += $'
       return
     end
-    # @return ‰ğÍ’†
+    # @return è§£æä¸­
     if @return_detail_analyzing
       text =~ /\/\/\s*/
       @cur_func_doc.return_detail += $'
@@ -208,8 +208,8 @@ class Analyzer
     end
   end
   #--------------------------------------------------------------------------
-  # step 2 Œ¾Œê•ÊƒIƒvƒVƒ‡ƒ“‰ğÍ
-  #   ["disable"] false ‚Ìê‡Adisable
+  # step 2 è¨€èªåˆ¥ã‚ªãƒ—ã‚·ãƒ§ãƒ³è§£æ
+  #   ["disable"] false ã®å ´åˆã€disable
   #--------------------------------------------------------------------------
   def step2_analyze_lang_option(one_line_str)
     r = []
@@ -232,7 +232,7 @@ class Analyzer
         end
       end
     end
-    # ‚Ğ‚Æ‚Â‚à‚È‚¢ê‡‚Í—LŒø‚Å‚ ‚é‚±‚Æ‚ğ¦‚·’l‚Ì‚İƒZƒbƒg
+    # ã²ã¨ã¤ã‚‚ãªã„å ´åˆã¯æœ‰åŠ¹ã§ã‚ã‚‹ã“ã¨ã‚’ç¤ºã™å€¤ã®ã¿ã‚»ãƒƒãƒˆ
     if r.size == 0
       r.push(OptArg.new("disable", false))
     end
@@ -240,21 +240,21 @@ class Analyzer
     @step = 3
   end
   #----------------------------------------------------------------------------
-  # step3 ŠÖ”éŒ¾‰ğÍ
+  # step3 é–¢æ•°å®£è¨€è§£æ
   #----------------------------------------------------------------------------
   def step3_analyze_func_decl(text)
     if text =~ /\s+.*\(.*\);/
     
-      # () ‚Æ‚»‚Ì‘O‚Æ‚É•ª‚¯‚é
+      # () ã¨ãã®å‰ã¨ã«åˆ†ã‘ã‚‹
       text =~ /\(.*\)/
       arg_str = $&
       
-      # ŠÖ”–¼EŒ^–¼
+      # é–¢æ•°åãƒ»å‹å
       $` =~ /\S+$/
       @cur_func_doc.name = $&
       @cur_func_doc.return_type = $`.strip
       
-      # ˆø” - Š‡ŒÊ‚ğíœ‚µA•ªŠ„
+      # å¼•æ•° - æ‹¬å¼§ã‚’å‰Šé™¤ã—ã€åˆ†å‰²
       arg_str.delete!("()")
       args = arg_str.split(",")
       for a in args
@@ -262,11 +262,11 @@ class Analyzer
         a.strip!
         pair = a.split("=")
         arg_decl.name = pair[0]
-        if pair.size != 1 # ƒfƒtƒHƒ‹ƒgˆø”‚ª‚ ‚é
+        if pair.size != 1 # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°ãŒã‚ã‚‹
           arg_decl.default = pair[1]
           arg_decl.default.strip!
         end
-        # Œ^•”‚Æ–¼‘O‚É•ª‚¯‚é
+        # å‹éƒ¨ã¨åå‰ã«åˆ†ã‘ã‚‹
         arg_decl.name.strip!
         arg_decl.name =~ /\S+$/
         arg_decl.name = $&
@@ -278,25 +278,25 @@ class Analyzer
     end
   end
   #----------------------------------------------------------------------------
-  # @par ‰ğÍI—¹
+  # @par è§£æçµ‚äº†
   #----------------------------------------------------------------------------
   def end_par_analyze
     @func_detail_analyzing = false
     @return_detail_analyzing = false
   end
   #----------------------------------------------------------------------------
-  # enum ‰ğÍ
+  # enum è§£æ
   #----------------------------------------------------------------------------
   def analyze_enum(filepath, enum_types)
     file = open(filepath)
     file_text = file.read
     
     for type in enum_types
-      # enum ’è‹`‘S‘Ì‚ğæ‚èo‚·
+      # enum å®šç¾©å…¨ä½“ã‚’å–ã‚Šå‡ºã™
       if file_text =~ /enum\s#{type}.*?\}/m
-        # {`} ‚ğæ‚èo‚·
+        # {ï½} ã‚’å–ã‚Šå‡ºã™
         $& =~ /\{.*\}/m
-        # ƒRƒƒ“ƒg‚Æ‰üsA‹ó”’Aƒuƒ‰ƒPƒbƒg‚ğíœ
+        # ã‚³ãƒ¡ãƒ³ãƒˆã¨æ”¹è¡Œã€ç©ºç™½ã€ãƒ–ãƒ©ã‚±ãƒƒãƒˆã‚’å‰Šé™¤
         t = $&.gsub(/\/\/.*$/, "").delete("\r\n \t{}")
         decls = t.split(",")
         last_value = 0
@@ -310,7 +310,7 @@ class Analyzer
           end
           last_value += 1
         end
-      # Œ©‚Â‚©‚ç‚È‚©‚Á‚½
+      # è¦‹ã¤ã‹ã‚‰ãªã‹ã£ãŸ
       else
         #p "not found enum " + type
       end

@@ -10,7 +10,7 @@
 //-----------------------------------------------------------------------------
 #module "LNote"
 
-// LFile_ExistDirectoryOrEXE(stat: 0=‚È‚µ 1=ƒfƒBƒŒƒNƒgƒŠ‚É‘¶İ(—Dæ) 2=EXE‚É‘¶İ)
+// LFile_ExistDirectoryOrEXE(stat: 0=ãªã— 1=ãƒ‡ã‚£ãƒ¬ã‚¯ãƒˆãƒªã«å­˜åœ¨(å„ªå…ˆ) 2=EXEã«å­˜åœ¨)
 #deffunc LFile_ExistDirectoryOrEXE str p1
 	LFile_Exist@ p1
 	if stat != 0 : return 1

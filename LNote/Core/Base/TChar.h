@@ -15,10 +15,10 @@
 #include <stdio.h>
 #include <wchar.h>
 
-#if defined(LNOTE_WINDOWS)
-    #define snprintf  sprintf_s
-    #define ln_wfopen _wfopen
-#endif
+//#if defined(LNOTE_WINDOWS)
+//    #define snprintf  sprintf_s
+//    #define ln_wfopen _wfopen
+//#endif
 
 #if defined(LNOTE_GNUC)
 // gcc ‚É _wfopne ‚ª‚È‚¢‚Ì‚Å

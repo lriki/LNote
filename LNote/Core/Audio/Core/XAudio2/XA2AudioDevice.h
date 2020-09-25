@@ -209,7 +209,7 @@ private:
 
 public:
 
-    LN_REFOBJ_METHODS();
+    LN_REFOBJ_METHODS;
 };
 
 
@@ -220,7 +220,8 @@ public:
 
 } // namespace XAudio2
 } // namespace Audio
-} // namespace Core
+} // namespace Core
+
 } // namespace LNote
 
 //=============================================================================

@@ -1,5 +1,5 @@
-//=============================================================================
-//y LFAudio z
+ï»¿//=============================================================================
+//ã€ LFAudio ã€‘
 //-----------------------------------------------------------------------------
 ///**
 //  @file       LFAudio.h
@@ -28,7 +28,7 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 // LAudio
 //-----------------------------------------------------------------------------
 ///**
-//  @defgroup   group_laudio LAudio - ‰¹ºŠÇ—‹y‚ÑƒQ[ƒ€ƒI[ƒfƒBƒI‹@”\
+//  @defgroup   group_laudio LAudio - éŸ³å£°ç®¡ç†åŠã³ã‚²ãƒ¼ãƒ ã‚ªãƒ¼ãƒ‡ã‚£ã‚ªæ©Ÿèƒ½
 //  @brief      
 //  @{
 //*/
@@ -36,165 +36,165 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGM ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  filename   : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  volume     : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch      : ƒsƒbƒ` (50 ` 200)
-    //  @param[in]  fade_time  : ƒtƒF[ƒhƒCƒ“‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      BGM ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  filename   : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  volume     : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch      : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @param[in]  fade_time  : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¤ãƒ³ã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp override=true}]
     HRESULT LAudio_PlayBGM( const TCHAR* filename, int volume = 100, int pitch = 100, int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚©‚ç BGM ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @param[in]  fade_time   : ƒtƒF[ƒhƒCƒ“‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ BGM ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @param[in]  fade_time   : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¤ãƒ³ã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LAudio_PlayBGMMem( const void* data, int data_size, int volume = 100, int pitch = 100, int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGM ‚Ì‰‰‘t‚ğ’â~‚·‚é
-    //  @param[in]  fade_time : ƒtƒF[ƒhƒAƒEƒg‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      BGM ã®æ¼”å¥ã‚’åœæ­¢ã™ã‚‹
+    //  @param[in]  fade_time : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¢ã‚¦ãƒˆã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LAudio_StopBGM( int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGS ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  filename   : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  volume     : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch      : ƒsƒbƒ` (50 ` 200)
-    //  @param[in]  fade_time  : ƒtƒF[ƒhƒCƒ“‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      BGS ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  filename   : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  volume     : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch      : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @param[in]  fade_time  : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¤ãƒ³ã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp override=true}]
     HRESULT LAudio_PlayBGS( const TCHAR* filename, int volume = 100, int pitch = 100, int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚©‚ç BGS ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @param[in]  fade_time   : ƒtƒF[ƒhƒCƒ“‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ BGS ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @param[in]  fade_time   : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¤ãƒ³ã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LAudio_PlayBGSMem( const void* data, int data_size, int volume = 100, int pitch = 100, int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      BGS ‚Ì‰‰‘t‚ğ’â~‚·‚é
-    //  @param[in]  fade_time : ƒtƒF[ƒhƒAƒEƒg‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      BGS ã®æ¼”å¥ã‚’åœæ­¢ã™ã‚‹
+    //  @param[in]  fade_time : ãƒ•ã‚§ãƒ¼ãƒ‰ã‚¢ã‚¦ãƒˆã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LAudio_StopBGS( int fade_time = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ME ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  filename   : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  volume     : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch      : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ME ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  filename   : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  volume     : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch      : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp override=true}]
     HRESULT LAudio_PlayME( const TCHAR* filename, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚©‚ç ME ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ ME ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LAudio_PlayMEMem( const void* data, int data_size, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ME ‚Ì‰‰‘t‚ğ’â~‚·‚é
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ME ã®æ¼”å¥ã‚’åœæ­¢ã™ã‚‹
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LAudio_StopME();
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      SE ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  filename   : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  volume     : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch      : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      SE ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  filename   : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  volume     : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch      : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp override=true}]
     HRESULT LAudio_PlaySE( const TCHAR* filename, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      SE ‚ğ‰‰‘t‚·‚é (3D ƒTƒEƒ“ƒh)
-    //  @param[in]  filename    : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  x, y, z     : 3D À•W
-    //  @param[in]  distance    : Œ¸Š‹——£
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      SE ã‚’æ¼”å¥ã™ã‚‹ (3D ã‚µã‚¦ãƒ³ãƒ‰)
+    //  @param[in]  filename    : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  x, y, z     : 3D åº§æ¨™
+    //  @param[in]  distance    : æ¸›è¡°è·é›¢
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp override=true}]
     HRESULT LAudio_PlaySE3D( const TCHAR* filename, float x, float y, float z, float distance, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚©‚ç SE ‚ğ‰‰‘t‚·‚é
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ SE ã‚’æ¼”å¥ã™ã‚‹
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LAudio_PlaySEMem( const void* data, int data_size, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚©‚ç SE ‚ğ‰‰‘t‚·‚é (3D ƒTƒEƒ“ƒh)
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  x, y, z     : 3D À•W
-    //  @param[in]  distance    : Œ¸Š‹——£
-    //  @param[in]  volume      : ƒ{ƒŠƒ…[ƒ€ (0 ` 100)
-    //  @param[in]  pitch       : ƒsƒbƒ` (50 ` 200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰ SE ã‚’æ¼”å¥ã™ã‚‹ (3D ã‚µã‚¦ãƒ³ãƒ‰)
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  x, y, z     : 3D åº§æ¨™
+    //  @param[in]  distance    : æ¸›è¡°è·é›¢
+    //  @param[in]  volume      : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0 ï½ 100)
+    //  @param[in]  pitch       : ãƒ”ãƒƒãƒ (50 ï½ 200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LAudio_PlaySE3DMem( const void* data, int data_size, float x, float y, float z, float distance, int volume = 100, int pitch = 100 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ‚·‚×‚Ä‚Ì SE ‚Ì‰‰‘t‚ğ’â~‚·‚é
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ã™ã¹ã¦ã® SE ã®æ¼”å¥ã‚’åœæ­¢ã™ã‚‹
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LAudio_StopSE();
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      3D ‹óŠÔ‚Ì1ƒ[ƒgƒ‹‘Š“–‚Ì‹——£‚Ìİ’è
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      3D ç©ºé–“ã®1ãƒ¡ãƒ¼ãƒˆãƒ«ç›¸å½“ã®è·é›¢ã®è¨­å®š
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LAudio_SetMetreUnitDistance( float distance );
@@ -205,7 +205,7 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 // L3DSoundListener
 //-----------------------------------------------------------------------------
 ///**
-//  @defgroup   group_l3dsoundlistener L3DSoundListener - 3D‰¹ºƒŠƒXƒi[
+//  @defgroup   group_l3dsoundlistener L3DSoundListener - 3DéŸ³å£°ãƒªã‚¹ãƒŠãƒ¼
 //  @brief      
 //  @{
 //*/
@@ -213,36 +213,36 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒŠƒXƒi[‚ÌˆÊ’u‚Ìİ’è
-    //  @param[in]  x, y, z    : À•W
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒªã‚¹ãƒŠãƒ¼ã®ä½ç½®ã®è¨­å®š
+    //  @param[in]  x, y, z    : åº§æ¨™
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT L3DSoundListener_SetPosition( float x, float y, float z );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒŠƒXƒi[‚Ì³–Ê•ûŒü‚Ìİ’è
-    //  @param[in]  x, y, z    : Œü‚«
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒªã‚¹ãƒŠãƒ¼ã®æ­£é¢æ–¹å‘ã®è¨­å®š
+    //  @param[in]  x, y, z    : å‘ã
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT L3DSoundListener_SetDirection( float x, float y, float z );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒŠƒXƒi[‚Ìã•ûŒü‚Ìİ’è
-    //  @param[in]  x, y, z    : Œü‚« (³–Ê•ûŒü‚Æ‚Í’¼Œğ‚Å‚ ‚é‚±‚Æ)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒªã‚¹ãƒŠãƒ¼ã®ä¸Šæ–¹å‘ã®è¨­å®š
+    //  @param[in]  x, y, z    : å‘ã (æ­£é¢æ–¹å‘ã¨ã¯ç›´äº¤ã§ã‚ã‚‹ã“ã¨)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT L3DSoundListener_SetUpDirection( float x, float y, float z );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒŠƒXƒi[‚Ì‘¬“x‚Ìİ’è
-    //  @param[in]  x, y, z    : ‘¬“x
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒªã‚¹ãƒŠãƒ¼ã®é€Ÿåº¦ã®è¨­å®š
+    //  @param[in]  x, y, z    : é€Ÿåº¦
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT L3DSoundListener_Velocity( float x, float y, float z );
@@ -253,7 +253,7 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 // LSound
 //-----------------------------------------------------------------------------
 ///**
-//  @defgroup   group_lsound LSound - ‰¹º‹@”\
+//  @defgroup   group_lsound LSound - éŸ³å£°æ©Ÿèƒ½
 //  @brief      
 //  @{
 //*/
@@ -261,225 +261,225 @@ LNOTE_FUNC_NAMESPACE_BEGIN
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒtƒ@ƒCƒ‹‚©‚ç‰¹º‚ğì¬‚·‚é
-    //  @param[in]  filename    : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  enable_3d   : true ‚Ìê‡A3D ‰¹Œ¹‚Æ‚µ‚Äì¬‚·‚é
-    //  @param[in]  play_type   : ‰¹º‚ÌÄ¶•û–@
-    //  @return     ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
+    //  @brief      ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰éŸ³å£°ã‚’ä½œæˆã™ã‚‹
+    //  @param[in]  filename    : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  enable_3d   : true ã®å ´åˆã€3D éŸ³æºã¨ã—ã¦ä½œæˆã™ã‚‹
+    //  @param[in]  play_type   : éŸ³å£°ã®å†ç”Ÿæ–¹æ³•
+    //  @return     ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
     //*/
     //---------------------------------------------------------------------[{hsp disable},{ruby a=1 b=2}]
     LNHandle LSound_Load( const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒƒ‚ƒŠã‚Ìƒf[ƒ^‚©‚ç‰¹º‚ğì¬‚·‚é
-    //  @param[in]  data        : ƒƒ‚ƒŠã‚Ì‰¹ºƒf[ƒ^‚Ö‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  data_size   : ƒf[ƒ^ƒTƒCƒY (ƒoƒCƒg’PˆÊ)
-    //  @param[in]  enable_3d   : true ‚Ìê‡A3D ‰¹Œ¹‚Æ‚µ‚Äì¬‚·‚é
-    //  @return     ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
+    //  @brief      ãƒ¡ãƒ¢ãƒªä¸Šã®ãƒ‡ãƒ¼ã‚¿ã‹ã‚‰éŸ³å£°ã‚’ä½œæˆã™ã‚‹
+    //  @param[in]  data        : ãƒ¡ãƒ¢ãƒªä¸Šã®éŸ³å£°ãƒ‡ãƒ¼ã‚¿ã¸ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  data_size   : ãƒ‡ãƒ¼ã‚¿ã‚µã‚¤ã‚º (ãƒã‚¤ãƒˆå˜ä½)
+    //  @param[in]  enable_3d   : true ã®å ´åˆã€3D éŸ³æºã¨ã—ã¦ä½œæˆã™ã‚‹
+    //  @return     ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
     //*/
     //---------------------------------------------------------------------
     LNHandle LSound_CreateMem( const void* data, int data_size, bool enable_3d = false );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒtƒ@ƒCƒ‹‚©‚ç‰¹º‚ğì¬‚·‚é
-    //  @param[out] out_handle  : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹‚ğŠi”[‚·‚é•Ï”‚Ìƒ|ƒCƒ“ƒ^
-    //  @param[in]  filename    : ƒtƒ@ƒCƒ‹–¼
-    //  @param[in]  enable_3d   : true ‚Ìê‡A3D ‰¹Œ¹‚Æ‚µ‚Äì¬‚·‚é
-    //  @param[in]  play_type   : ‰¹º‚ÌÄ¶•û–@
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ•ã‚¡ã‚¤ãƒ«ã‹ã‚‰éŸ³å£°ã‚’ä½œæˆã™ã‚‹
+    //  @param[out] out_handle  : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«ã‚’æ ¼ç´ã™ã‚‹å¤‰æ•°ã®ãƒã‚¤ãƒ³ã‚¿
+    //  @param[in]  filename    : ãƒ•ã‚¡ã‚¤ãƒ«å
+    //  @param[in]  enable_3d   : true ã®å ´åˆã€3D éŸ³æºã¨ã—ã¦ä½œæˆã™ã‚‹
+    //  @param[in]  play_type   : éŸ³å£°ã®å†ç”Ÿæ–¹æ³•
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------[{hsp name=LSound_Load}]
     HRESULT LSound_LoadToPtr( LNHandle* out_handle, const TCHAR* filename, bool enable_3d = false, LNSoundPlayType play_type = LN_SOUNDPLAYTYPE_AUTO );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ‰¹º‚ğíœ‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
+    //  @brief      éŸ³å£°ã‚’å‰Šé™¤ã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
     //*/
     //---------------------------------------------------------------------
     void LSound_Release( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒ{ƒŠƒ…[ƒ€‚Ìİ’è
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  volume          : ƒ{ƒŠƒ…[ƒ€ (0`100)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒœãƒªãƒ¥ãƒ¼ãƒ ã®è¨­å®š
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  volume          : ãƒœãƒªãƒ¥ãƒ¼ãƒ  (0ï½100)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetVolume( LNHandle sound_handle, int volume );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒ{ƒŠƒ…[ƒ€‚Ìæ“¾
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ƒ{ƒŠƒ…[ƒ€
+    //  @brief      ãƒœãƒªãƒ¥ãƒ¼ãƒ ã®å–å¾—
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     ãƒœãƒªãƒ¥ãƒ¼ãƒ 
     //*/
     //---------------------------------------------------------------------
     int LSound_GetVolume( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒsƒbƒ`‚Ìİ’è
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  pitch           : ƒsƒbƒ` (50`200)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ”ãƒƒãƒã®è¨­å®š
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  pitch           : ãƒ”ãƒƒãƒ (50ï½200)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetPitch( LNHandle sound_handle, int pitch );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒsƒbƒ`‚Ìæ“¾
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ƒsƒbƒ`
+    //  @brief      ãƒ”ãƒƒãƒã®å–å¾—
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     ãƒ”ãƒƒãƒ
     //*/
     //---------------------------------------------------------------------
     int LSound_GetPitch( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒ‹[ƒvÄ¶‚Ì—LŒøİ’è
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  flag            : true = ƒ‹[ƒvÄ¶‚·‚é / false = ‚µ‚È‚¢
-    //  @param[in]  begin           : ƒ‹[ƒv—Ìˆæ‚Ìæ“ªˆÊ’u (ƒTƒ“ƒvƒ‹”’PˆÊ)
-    //  @param[in]  length          : ƒ‹[ƒv—Ìˆæ’·‚³ (ƒTƒ“ƒvƒ‹”’PˆÊ)
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ãƒ«ãƒ¼ãƒ—å†ç”Ÿã®æœ‰åŠ¹è¨­å®š
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  flag            : true = ãƒ«ãƒ¼ãƒ—å†ç”Ÿã™ã‚‹ / false = ã—ãªã„
+    //  @param[in]  begin           : ãƒ«ãƒ¼ãƒ—é ˜åŸŸã®å…ˆé ­ä½ç½® (ã‚µãƒ³ãƒ—ãƒ«æ•°å˜ä½)
+    //  @param[in]  length          : ãƒ«ãƒ¼ãƒ—é ˜åŸŸé•·ã• (ã‚µãƒ³ãƒ—ãƒ«æ•°å˜ä½)
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //  @par
-    //              begin ‚Æ length ‚É 0 ‚ğw’è‚·‚é‚ÆA‘S‘Ì‚ğƒ‹[ƒv—Ìˆæ‚Æ‚µ‚Äİ’è‚µ‚Ü‚·B
+    //              begin ã¨ length ã« 0 ã‚’æŒ‡å®šã™ã‚‹ã¨ã€å…¨ä½“ã‚’ãƒ«ãƒ¼ãƒ—é ˜åŸŸã¨ã—ã¦è¨­å®šã—ã¾ã™ã€‚
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetLoopState( LNHandle sound_handle, bool loop, int begin = 0, int length = 0 );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒ‹[ƒvÄ¶‚ª—LŒø‚©‚ğ’²‚×‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     true = ƒ‹[ƒvÄ¶‚·‚é / false = ƒ‹[ƒvÄ¶‚µ‚È‚¢
+    //  @brief      ãƒ«ãƒ¼ãƒ—å†ç”ŸãŒæœ‰åŠ¹ã‹ã‚’èª¿ã¹ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     true = ãƒ«ãƒ¼ãƒ—å†ç”Ÿã™ã‚‹ / false = ãƒ«ãƒ¼ãƒ—å†ç”Ÿã—ãªã„
     //*/
     //---------------------------------------------------------------------
     bool LSound_IsLoop( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒTƒEƒ“ƒh‚ÌÄ¶ó‘Ô‚ğæ“¾‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     LN_SOUNDPLAYSTATE_STOP    : ’â~’†
-    //              LN_SOUNDPLAYSTATE_PLAYING : Ä¶’†
-    //              LN_SOUNDPLAYSTATE_PAUSING : ˆê’â~’†
+    //  @brief      ã‚µã‚¦ãƒ³ãƒ‰ã®å†ç”ŸçŠ¶æ…‹ã‚’å–å¾—ã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     LN_SOUNDPLAYSTATE_STOP    : åœæ­¢ä¸­
+    //              LN_SOUNDPLAYSTATE_PLAYING : å†ç”Ÿä¸­
+    //              LN_SOUNDPLAYSTATE_PAUSING : ä¸€æ™‚åœæ­¢ä¸­
     //*/
     //---------------------------------------------------------------------
     LNSoundPlayState LSound_GetPlayState( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ‰¹º‚ğÄ¶‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      éŸ³å£°ã‚’å†ç”Ÿã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_Play( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      Ä¶‚ğ’â~‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      å†ç”Ÿã‚’åœæ­¢ã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_Stop( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief      ˆê’â~
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  pause           : true = ˆê’â~ / false = ˆê’â~‰ğœ
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      ä¸€æ™‚åœæ­¢
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  pause           : true = ä¸€æ™‚åœæ­¢ / false = ä¸€æ™‚åœæ­¢è§£é™¤
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
 	HRESULT LSound_Pause( LNHandle sound_handle, bool pause );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ‰¹—Ê‚ÌƒtƒF[ƒh
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  target_volume   : •ÏXæ‚Ì‰¹—Ê
-    //  @param[in]  time            : ƒtƒF[ƒh‚É‚©‚¯‚éŠÔ (ƒ~ƒŠ•b)
-    //  @param[in]  fade_state      : ƒtƒF[ƒhŠ®—¹Œã‚Ì“®ì‚Ìw’è
-    //                              @arg LN_SOUNDFADE_CONTINUE : Œp‘±
-    //                              @arg LN_SOUNDFADE_STOP : ’â~‚·‚é
-    //                              @arg LN_SOUNDFADE_STOP_RESET : ’â~‚µ‚ÄA‰¹—Ê‚ğŒ³‚Ì’l‚É–ß‚·
-    //                              @arg LN_SOUNDFADE_PAUSE : ˆê’â~‚·‚é
-    //                              @arg LN_SOUNDFADE_PAUSE_RESET : ˆê’â~‚µ‚ÄA‰¹—Ê‚ğŒ³‚Ì’l‚É–ß‚·
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief      éŸ³é‡ã®ãƒ•ã‚§ãƒ¼ãƒ‰
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  target_volume   : å¤‰æ›´å…ˆã®éŸ³é‡
+    //  @param[in]  time            : ãƒ•ã‚§ãƒ¼ãƒ‰ã«ã‹ã‘ã‚‹æ™‚é–“ (ãƒŸãƒªç§’)
+    //  @param[in]  fade_state      : ãƒ•ã‚§ãƒ¼ãƒ‰å®Œäº†å¾Œã®å‹•ä½œã®æŒ‡å®š
+    //                              @arg LN_SOUNDFADE_CONTINUE : ç¶™ç¶š
+    //                              @arg LN_SOUNDFADE_STOP : åœæ­¢ã™ã‚‹
+    //                              @arg LN_SOUNDFADE_STOP_RESET : åœæ­¢ã—ã¦ã€éŸ³é‡ã‚’å…ƒã®å€¤ã«æˆ»ã™
+    //                              @arg LN_SOUNDFADE_PAUSE : ä¸€æ™‚åœæ­¢ã™ã‚‹
+    //                              @arg LN_SOUNDFADE_PAUSE_RESET : ä¸€æ™‚åœæ­¢ã—ã¦ã€éŸ³é‡ã‚’å…ƒã®å€¤ã«æˆ»ã™
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_FadeVolume( LNHandle sound_handle, int target_volume, int time, LNSoundFadeState fade_state );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      Ä¶‚µ‚½ƒTƒ“ƒvƒ‹”‚Ìæ“¾
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     Ä¶‚µ‚½ƒTƒ“ƒvƒ‹”
+    //  @brief      å†ç”Ÿã—ãŸã‚µãƒ³ãƒ—ãƒ«æ•°ã®å–å¾—
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     å†ç”Ÿã—ãŸã‚µãƒ³ãƒ—ãƒ«æ•°
     //*/
     //---------------------------------------------------------------------
     int LSound_GetUnitsPlayed( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ‰¹ºƒf[ƒ^‘S‘Ì‚ÌƒTƒ“ƒvƒ‹”‚Ìæ“¾
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ‰¹ºƒf[ƒ^‘S‘Ì‚ÌƒTƒ“ƒvƒ‹”
+    //  @brief      éŸ³å£°ãƒ‡ãƒ¼ã‚¿å…¨ä½“ã®ã‚µãƒ³ãƒ—ãƒ«æ•°ã®å–å¾—
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     éŸ³å£°ãƒ‡ãƒ¼ã‚¿å…¨ä½“ã®ã‚µãƒ³ãƒ—ãƒ«æ•°
     //*/
     //---------------------------------------------------------------------
     int LSound_GetTotalUnits( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
 	///**
-    //  @brief      ƒTƒ“ƒvƒŠƒ“ƒOü”g”‚Ìæ“¾
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     ƒTƒ“ƒvƒŠƒ“ƒOü”g”
+    //  @brief      ã‚µãƒ³ãƒ—ãƒªãƒ³ã‚°å‘¨æ³¢æ•°ã®å–å¾—
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     ã‚µãƒ³ãƒ—ãƒªãƒ³ã‚°å‘¨æ³¢æ•°
     //*/
     //---------------------------------------------------------------------
     int LSound_GetUnitsParSecond( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D ‰¹Œ¹‚©‚ğ’²‚×‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @return     true=3D‰¹Œ¹ / false=3D‰¹Œ¹‚Å‚Í‚È‚¢
+    //  @brief		3D éŸ³æºã‹ã‚’èª¿ã¹ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @return     true=3DéŸ³æº / false=3DéŸ³æºã§ã¯ãªã„
     //*/
     //---------------------------------------------------------------------
     bool LSound_Is3DSound( LNHandle sound_handle );
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D ‰¹Œ¹‚Æ‚µ‚Ä‚ÌˆÊ’u‚ğİ’è‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  x, y ,z         : 3D À•W
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief		3D éŸ³æºã¨ã—ã¦ã®ä½ç½®ã‚’è¨­å®šã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  x, y ,z         : 3D åº§æ¨™
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetEmitterPosition( int sound_handle, float x, float y, float z );
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D ‰¹Œ¹‚Æ‚µ‚Ä‚Ì‘¬“x‚ğİ’è‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  x, y, z         : ‘¬“x
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief		3D éŸ³æºã¨ã—ã¦ã®é€Ÿåº¦ã‚’è¨­å®šã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  x, y, z         : é€Ÿåº¦
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetEmitterVelocity( int sound_handle, float x, float y, float z );
 
     //---------------------------------------------------------------------
     ///**
-    //  @brief		3D ‰¹Œ¹‚ÌŒ¸Š‹——£ (’®‚±‚¦‚È‚­‚È‚é‹——£) ‚ğİ’è‚·‚é
-    //  @param[in]  sound_handle    : ƒTƒEƒ“ƒhƒnƒ“ƒhƒ‹
-    //  @param[in]  distance        : ‹——£
-    //  @return     ƒŠƒUƒ‹ƒgƒR[ƒh
+    //  @brief		3D éŸ³æºã®æ¸›è¡°è·é›¢ (è´ã“ãˆãªããªã‚‹è·é›¢) ã‚’è¨­å®šã™ã‚‹
+    //  @param[in]  sound_handle    : ã‚µã‚¦ãƒ³ãƒ‰ãƒãƒ³ãƒ‰ãƒ«
+    //  @param[in]  distance        : è·é›¢
+    //  @return     ãƒªã‚¶ãƒ«ãƒˆã‚³ãƒ¼ãƒ‰
     //*/
     //---------------------------------------------------------------------
     HRESULT LSound_SetEmitterDistance( int sound_handle, float distance );

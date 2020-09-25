@@ -105,7 +105,7 @@ public:
         EnableMultipleRunning   = false;
         EnableShowFPS           = false;
 
-        WindowTitle             = LNOTE_NAME" "LNOTE_VERSION_STR;
+        WindowTitle             = LNOTE_NAME " " LNOTE_VERSION_STR;
         WindowWidth             = 640;
         WindowHeight            = 480;
         WindowHandle            = NULL;

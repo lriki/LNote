@@ -1,5 +1,5 @@
-//=============================================================================
-//y LFFramework z
+ï»¿//=============================================================================
+//ã€ LFFramework ã€‘
 //-----------------------------------------------------------------------------
 ///**
 //  @file       LFFramework.h
@@ -15,17 +15,17 @@ using namespace LNote;
 
 //-----------------------------------------------------------------------------
 
-// ƒ|ƒCƒ“ƒ^‚Ì int ƒLƒƒƒXƒg
+// ãƒã‚¤ãƒ³ã‚¿ã® int ã‚­ãƒ£ã‚¹ãƒˆ
 #define LN_TO_INT( ptr_ )           reinterpret_cast< int >( ptr_ )
 #define LN_INT_TO( type_, value_ )  reinterpret_cast< type_ >( value_ )
 
-// x_ y_ ‚É Geometry::Size ‚É‘ã“ü
+// x_ y_ ã« Geometry::Size ã«ä»£å…¥
 #define LNFUNC_LSize_TO( v_, w_, h_ ) \
         const Geometry::Size& v = ( v_ ); \
         w_ = v.w; \
         h_ = v.h;
 
-// xyz ‚É Vector3 ‚É‘ã“ü
+// xyz ã« Vector3 ã«ä»£å…¥
 #define LNFUNC_SUBSTITUTE_VECTOR3_TO_XYZ( vec3_, x_, y_, z_ ) \
         const LVector3& v3 = ( vec3_ ); \
         *x_ = v3.x; \
@@ -34,7 +34,7 @@ using namespace LNote;
 
 
 //-----------------------------------------------------------------------------
-// ŠÖ”ƒ‰ƒCƒuƒ‰ƒŠ“à‚Å‹¤’Ê‚Ì‚à‚Ì
+// é–¢æ•°ãƒ©ã‚¤ãƒ–ãƒ©ãƒªå†…ã§å…±é€šã®ã‚‚ã®
 
 namespace LNote
 {

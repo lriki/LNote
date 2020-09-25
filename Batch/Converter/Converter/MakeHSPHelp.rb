@@ -1,36 +1,35 @@
-#! ruby -EWindows-31J
-# -*- mode:ruby; coding:Windows-31J -*-
+
 #==============================================================================
-# ¡ HSP ƒwƒ‹ƒvƒtƒ@ƒCƒ‹‚ğì‚é
+# â–  HSP ãƒ˜ãƒ«ãƒ—ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œã‚‹
 #------------------------------------------------------------------------------
-# ’ˆÓc
-#   E[‘Î‰Ï]"@param[in]  x, y, z" ‚Í³í‚ÉŒŸo‚Å‚«‚È‚¢‚Ì‚Å "x,y,z" ‚Ì‚æ‚¤‚ÉƒXƒy[ƒX‚ğÁ‚·B
-#   Eã‹L‚Ì‚æ‚¤‚È "x,y,z" ‚ÉƒfƒtƒHƒ‹ƒgˆø”‚Ìw’è‚Í‚Å‚«‚È‚¢
-#   EŠÖ”éŒ¾‚Í•¡”s‚É‚µ‚È‚¢
+# æ³¨æ„â€¦
+#   ãƒ»[å¯¾å¿œæ¸ˆ]"@param[in]  x, y, z" ã¯æ­£å¸¸ã«æ¤œå‡ºã§ããªã„ã®ã§ "x,y,z" ã®ã‚ˆã†ã«ã‚¹ãƒšãƒ¼ã‚¹ã‚’æ¶ˆã™ã€‚
+#   ãƒ»ä¸Šè¨˜ã®ã‚ˆã†ãª "x,y,z" ã«ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°ã®æŒ‡å®šã¯ã§ããªã„
+#   ãƒ»é–¢æ•°å®£è¨€ã¯è¤‡æ•°è¡Œã«ã—ãªã„
 #==============================================================================
 require './Config.rb'
 
-# ƒOƒ‹[ƒv
+# ã‚°ãƒ«ãƒ¼ãƒ—
 $class_group = {
-  "LConfig"           => "‰Šúİ’è",
-  "LAudio"            => "‰¹º‹@”\",
-  "LSound"            => "‰¹º‹@”\",
-  "L3DSoundListener"  => "‰¹º‹@”\"
+  "LConfig"           => "åˆæœŸè¨­å®š",
+  "LAudio"            => "éŸ³å£°æ©Ÿèƒ½",
+  "LSound"            => "éŸ³å£°æ©Ÿèƒ½",
+  "L3DSoundListener"  => "éŸ³å£°æ©Ÿèƒ½"
 }
 
-# ƒwƒbƒ_ƒeƒ“ƒvƒŒ[ƒg
+# ãƒ˜ãƒƒãƒ€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 $hs_header_filepath = "HSPHelpTemplate/header.txt"
 
-# ŠÖ”ƒeƒ“ƒvƒŒ[ƒg
+# é–¢æ•°ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 $hs_func_filepath = "HSPHelpTemplate/function.txt"
 
-# ÅIo—Í‘S‘Ì‚É‘Î‚µ‚Äs‚¤•¶š—ñ’uŠ·
+# æœ€çµ‚å‡ºåŠ›å…¨ä½“ã«å¯¾ã—ã¦è¡Œã†æ–‡å­—åˆ—ç½®æ›
 $global_replace_strings = [
-  ["‚Ìƒ|ƒCƒ“ƒ^", ""]
+  ["ã®ãƒã‚¤ãƒ³ã‚¿", ""]
 ]
 
 #==============================================================================
-# £ İ’è‚±‚±‚Ü‚Å
+# â–² è¨­å®šã“ã“ã¾ã§
 #==============================================================================
 require './Analyzer.rb'
 
@@ -42,15 +41,15 @@ $func_template = file.read
 
 $analyzer = Analyzer.new
 
-# ‘Sƒtƒ@ƒCƒ‹‰ğÍ
+# å…¨ãƒ•ã‚¡ã‚¤ãƒ«è§£æ
 for filename in $target_files
   p filename
   $analyzer.analyze($lnote_root + filename, "hsp")
 end
 
-# —‚Æ‚µ‚İ
+# è½ã¨ã—è¾¼ã¿
 for doc in $analyzer.func_doc_list
-  # ‘Oˆ—
+  # å‰å‡¦ç†
   continue = false
   func_name = doc.name
   for opt in doc.option_args
@@ -67,13 +66,13 @@ for doc in $analyzer.func_doc_list
   end
   
   func_tmpl = $func_template.dup
-  # Šî–{
+  # åŸºæœ¬
   func_tmpl.sub!("_NAME_", func_name)
   func_tmpl.sub!("_BRIEF_", doc.summary)
   func_tmpl.sub!("_INST_", doc.detail)
   func_tmpl.sub!("_HREF_", "")
   
-  # ƒOƒ‹[ƒv
+  # ã‚°ãƒ«ãƒ¼ãƒ—
   func_name =~ /^.+_/
   class_name = $&.delete("_")
   group = $class_group[class_name]
@@ -83,7 +82,7 @@ for doc in $analyzer.func_doc_list
     func_tmpl.sub!("_GROUP_", "")
   end
   
-  # ˆø”ƒŠƒXƒg
+  # å¼•æ•°ãƒªã‚¹ãƒˆ
   arg_list = ""
   for i in 0...doc.param_pars.size
     arg_list += ", " if i != 0
@@ -91,33 +90,33 @@ for doc in $analyzer.func_doc_list
   end
   func_tmpl.sub!("_PRM_LIST_", arg_list)
   
-  # ˆø”Ú×
+  # å¼•æ•°è©³ç´°
   arg_detail = ""
-  # [in] “™‚É•K—v‚ÈƒXƒy[ƒX—Ìˆæƒ`ƒFƒbƒN
+  # [in] ç­‰ã«å¿…è¦ãªã‚¹ãƒšãƒ¼ã‚¹é ˜åŸŸãƒã‚§ãƒƒã‚¯
   io_space_count = 0
   for param in doc.param_pars
     io_space_count = param.io_type.length  if param.io_type.length > io_space_count
   end
-  io_space_count += 1 # ƒXƒy[ƒX
-  # –¼‘O‚ÆƒfƒtƒHƒ‹ƒg’l‚ÌƒXƒy[ƒX—Ìˆæƒ`ƒFƒbƒN
+  io_space_count += 1 # ã‚¹ãƒšãƒ¼ã‚¹
+  # åå‰ã¨ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã®ã‚¹ãƒšãƒ¼ã‚¹é ˜åŸŸãƒã‚§ãƒƒã‚¯
   name_space_count = 0
   for param in doc.param_pars
-    t = param.caption.length + 1    # +1 ‚ÍƒXƒy[ƒX‚Ì•ª
-    default_val = doc.find_default_arg(param.caption)  # ƒfƒtƒHƒ‹ƒgˆø”
+    t = param.caption.length + 1    # +1 ã¯ã‚¹ãƒšãƒ¼ã‚¹ã®åˆ†
+    default_val = doc.find_default_arg(param.caption)  # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
     if default_val != nil
-      t += default_val.length + 2 # +2 ‚Í ()
+      t += default_val.length + 2 # +2 ã¯ ()
     end
     name_space_count = t if t > name_space_count
   end
   
-  # ˆø”Ú×‚ğì‚é
+  # å¼•æ•°è©³ç´°ã‚’ä½œã‚‹
   for param in doc.param_pars
     # io type
     t = param.io_type
     snum = io_space_count - t.length
     t += " " * snum if snum > 0
     # name
-    default_val = doc.find_default_arg(param.caption)  # ƒfƒtƒHƒ‹ƒgˆø”
+    default_val = doc.find_default_arg(param.caption)  # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
     c = param.caption
     c += "(" + default_val + ")" if default_val != nil
     t += c
@@ -139,7 +138,7 @@ for doc in $analyzer.func_doc_list
     lines = doc.return_detail.split("\n")
     for i in 0...lines.size
       if i >= 1
-        arg_detail += "\n       " # "stat : " ‚Ì•ª‚Ì‹ó”’
+        arg_detail += "\n       " # "stat : " ã®åˆ†ã®ç©ºç™½
       end
       arg_detail += lines[i]
     end
@@ -150,31 +149,31 @@ for doc in $analyzer.func_doc_list
   step = 0
 end
 
-# ƒOƒ[ƒoƒ‹‚Ì’uŠ·ˆ—
+# ã‚°ãƒ­ãƒ¼ãƒãƒ«ã®ç½®æ›å‡¦ç†
 for pair in $global_replace_strings
   $output.gsub!(pair[0], pair[1])
 end
 
-# o—Í
+# å‡ºåŠ›
 open(ARGV[0] + "lnote.hs", "w") {|f| f.write $output}
 
 p "[finished.]"
 
 =begin
 #--------------------------------------------------------------------------
-# ŠÖ”ƒRƒƒ“ƒg‚Ìæ“ªs‚©‚ğƒ`ƒFƒbƒN‚·‚é "    ///**"
+# é–¢æ•°ã‚³ãƒ¡ãƒ³ãƒˆã®å…ˆé ­è¡Œã‹ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹ "    ///**"
 #--------------------------------------------------------------------------
 def is_doc_begin_line(one_line_str)
-  # \s+   :ƒXƒy[ƒXofƒ^ƒu‚ğ1‰ñˆÈã
-  # \/{3} :/ ‚ğ3‰ñ
-  # \*{2} :* ‚ğ2‰ñ
+  # \s+   :ã‚¹ãƒšãƒ¼ã‚¹ofã‚¿ãƒ–ã‚’1å›ä»¥ä¸Š
+  # \/{3} :/ ã‚’3å›
+  # \*{2} :* ã‚’2å›
   if one_line_str =~ /\s+\/{3}\*{2}/
     return true
   end
   return false
 end
 #--------------------------------------------------------------------------
-# ŠÖ”ƒRƒƒ“ƒg‚ÌI’[s‚©‚ğƒ`ƒFƒbƒN‚·‚é "    //*/"
+# é–¢æ•°ã‚³ãƒ¡ãƒ³ãƒˆã®çµ‚ç«¯è¡Œã‹ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹ "    //*/"
 #--------------------------------------------------------------------------
 def is_doc_end_line(one_line_str)
   if one_line_str =~ /\s+\/{2}\*\//
@@ -183,7 +182,7 @@ def is_doc_end_line(one_line_str)
   return false
 end
 #--------------------------------------------------------------------------
-# ŠÖ”s‚©‚ğƒ`ƒFƒbƒN‚·‚é (is_doc_end_line ‚ÅI’[ŒŸoÏ‚İ‚Å‚ ‚é‚±‚Æ)
+# é–¢æ•°è¡Œã‹ã‚’ãƒã‚§ãƒƒã‚¯ã™ã‚‹ (is_doc_end_line ã§çµ‚ç«¯æ¤œå‡ºæ¸ˆã¿ã§ã‚ã‚‹ã“ã¨)
 #--------------------------------------------------------------------------
 def is_decl_func_line(one_line_str)
   if one_line_str =~ /\s+.*\(.*\);/
@@ -192,8 +191,8 @@ def is_decl_func_line(one_line_str)
   return false
 end
 #--------------------------------------------------------------------------
-# step 2 Œ¾Œê•ÊƒIƒvƒVƒ‡ƒ“‰ğÍ
-#   ["disable"] false ‚Ìê‡Adisable
+# step 2 è¨€èªåˆ¥ã‚ªãƒ—ã‚·ãƒ§ãƒ³è§£æ
+#   ["disable"] false ã®å ´åˆã€disable
 #--------------------------------------------------------------------------
 def step_2_analyze_lang_option(one_line_str)
   r = []
@@ -223,10 +222,10 @@ end
 #
 #--------------------------------------------------------------------------
 class ParamPar
-  attr_accessor :io_type        # “üo—Í‚Ìí—Ş "[in]" "[out]" "[in,out]"
-  attr_accessor :caption        # ˆø”–¼
-  attr_accessor :detail         # à–¾ (':' ‚ğŠÜ‚Ş)
-  attr_accessor :arg_pars       # @arg •¶š—ñ”z—ñ "NAME : DETAIL"
+  attr_accessor :io_type        # å…¥å‡ºåŠ›ã®ç¨®é¡ "[in]" "[out]" "[in,out]"
+  attr_accessor :caption        # å¼•æ•°å
+  attr_accessor :detail         # èª¬æ˜ (':' ã‚’å«ã‚€)
+  attr_accessor :arg_pars       # @arg æ–‡å­—åˆ—é…åˆ— "NAME : DETAIL"
   def initialize
     @io_type = ""
     @caption = ""
@@ -238,16 +237,16 @@ end
 #
 #--------------------------------------------------------------------------
 class FuncDecl
-  attr_accessor :name     # ŠÖ”–¼
-  attr_accessor :args     # ˆø”ƒŠƒXƒg
+  attr_accessor :name     # é–¢æ•°å
+  attr_accessor :args     # å¼•æ•°ãƒªã‚¹ãƒˆ
   def initialize
     @name = ""
     @args = []
   end
 end
 class ArgDecl
-  attr_accessor :name     # ˆø”–¼
-  attr_accessor :default  # ƒfƒtƒHƒ‹ƒgˆø”
+  attr_accessor :name     # å¼•æ•°å
+  attr_accessor :default  # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
   def initialize
     @name = ""
     @default = ""
@@ -274,18 +273,18 @@ $func_template = file.read
 for filename in $target_files
   p filename
   
-  # 0 : doc ŠJnŒŸõ’†
-  # 1 : doc I’[ŒŸõ’†
-  # 2 : ŠÖ”éŒ¾ŒŸõ’†
-  # 3 : o—Í
+  # 0 : doc é–‹å§‹æ¤œç´¢ä¸­
+  # 1 : doc çµ‚ç«¯æ¤œç´¢ä¸­
+  # 2 : é–¢æ•°å®£è¨€æ¤œç´¢ä¸­
+  # 3 : å‡ºåŠ›
   step = 0
   
-  # 1 s‚¸‚Â“Ç‚ñ‚Å‚¢‚­
+  # 1 è¡Œãšã¤èª­ã‚“ã§ã„ã
   file = open($lnote_root + filename)
   while text = file.gets do
   
     case step
-      ################# doc ŠJnŒŸõ’†
+      ################# doc é–‹å§‹æ¤œç´¢ä¸­
       when 0
         if is_doc_begin_line(text)
           $param_pars.clear
@@ -294,22 +293,22 @@ for filename in $target_files
           $return_detail = nil
           step = 1
         end
-      ################# doc I’[ŒŸõ’† (doc ‰ğÍ’†)
+      ################# doc çµ‚ç«¯æ¤œç´¢ä¸­ (doc è§£æä¸­)
       when 1
-        # doc I’[
+        # doc çµ‚ç«¯
         if is_doc_end_line(text)
           step = 2
         end
         # @brief
         if text =~ /\@brief\s+/
-          $doc_brief = $' # ÅŒã‚Éƒ}ƒbƒ`‚µ‚½‰ÓŠ‚ÌŒã
+          $doc_brief = $' # æœ€å¾Œã«ãƒãƒƒãƒã—ãŸç®‡æ‰€ã®å¾Œ
         end
         # @param
         if text =~ /\@param/
           $last_param_par = ParamPar.new
           $' =~ /\[.+\]/
-          $last_param_par.io_type = $&    # $& = ƒ}ƒbƒ`‚µ‚½‰ÓŠ
-          # "x, y, z" ‚Ìb’è‘ÎôB':' ‚Ì‘O‚Ü‚Å‚ğˆø”–¼‚Æ‚İ‚È‚·
+          $last_param_par.io_type = $&    # $& = ãƒãƒƒãƒã—ãŸç®‡æ‰€
+          # "x, y, z" ã®æš«å®šå¯¾ç­–ã€‚':' ã®å‰ã¾ã§ã‚’å¼•æ•°åã¨ã¿ãªã™
           if $'.include?(":")
             $' =~ /:.+/
             $last_param_par.caption = $`.strip
@@ -317,7 +316,7 @@ for filename in $target_files
           else
             $' =~ /\s+\S+\s+/
             $last_param_par.caption = $&
-            $last_param_par.caption.strip!  # ‘OŒã‚ÌƒXƒy[ƒX‚ğíœ
+            $last_param_par.caption.strip!  # å‰å¾Œã®ã‚¹ãƒšãƒ¼ã‚¹ã‚’å‰Šé™¤
             $last_param_par.detail = $'
           end
           $param_pars.push($last_param_par)
@@ -330,21 +329,21 @@ for filename in $target_files
         if text =~ /\@return\s+/
           $return_detail = $'
         end
-      ################# Œ¾Œê•ÊƒIƒvƒVƒ‡ƒ“‰ğÍ
+      ################# è¨€èªåˆ¥ã‚ªãƒ—ã‚·ãƒ§ãƒ³è§£æ
       when 2
         $option_args = step_2_analyze_lang_option(text)
         step = 3
-      ################# ŠÖ”éŒ¾ŒŸõ’†
+      ################# é–¢æ•°å®£è¨€æ¤œç´¢ä¸­
       when 3
         if is_decl_func_line(text)
           $func_decl = FuncDecl.new
-          # () ‚Æ‚»‚Ì‘O‚Æ‚É•ª‚¯‚é
+          # () ã¨ãã®å‰ã¨ã«åˆ†ã‘ã‚‹
           text =~ /\(.*\)/
           arg_str = $&
-          # ŠÖ”–¼
+          # é–¢æ•°å
           $` =~ /\S+$/
           $func_decl.name = $&
-          # ˆø” - Š‡ŒÊ‚ğíœ‚µA•ªŠ„
+          # å¼•æ•° - æ‹¬å¼§ã‚’å‰Šé™¤ã—ã€åˆ†å‰²
           arg_str.delete!("()")
           args = arg_str.split(",")
           for a in args
@@ -352,15 +351,15 @@ for filename in $target_files
             a.strip!
             pair = a.split("=")
             arg_decl.name = pair[0]
-            if pair.size != 1 # ƒfƒtƒHƒ‹ƒgˆø”‚ª‚ ‚é
+            if pair.size != 1 # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°ãŒã‚ã‚‹
               arg_decl.default = pair[1]
               arg_decl.default.strip!
             end
-            # Œ^•”•ª‚ğæ‚èœ‚­
+            # å‹éƒ¨åˆ†ã‚’å–ã‚Šé™¤ã
             arg_decl.name.strip!
             arg_decl.name =~ /\S+$/
             arg_decl.name = $&
-            # ƒfƒtƒHƒ‹ƒgˆø”“o˜^
+            # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°ç™»éŒ²
             if !arg_decl.default.empty?
               $default_arg_hash[arg_decl.name] = arg_decl.default
             end
@@ -369,9 +368,9 @@ for filename in $target_files
           end
           step = 4
         end
-      ################# o—Í
+      ################# å‡ºåŠ›
       when 4
-        # ‘Oˆ—
+        # å‰å‡¦ç†
         continue = false
         for pair in $option_args
           case pair[0]
@@ -387,13 +386,13 @@ for filename in $target_files
         end
         
         func_tmpl = $func_template.dup
-        # Šî–{
+        # åŸºæœ¬
         func_tmpl.sub!("_NAME_", $func_decl.name)
         func_tmpl.sub!("_BRIEF_", $doc_brief)
         func_tmpl.sub!("_INST_", "")
         func_tmpl.sub!("_HREF_", "")
         
-        # ƒOƒ‹[ƒv
+        # ã‚°ãƒ«ãƒ¼ãƒ—
         $func_decl.name =~ /^.+_/
         class_name = $&.delete("_")
         group = $class_group[class_name]
@@ -403,7 +402,7 @@ for filename in $target_files
           func_tmpl.sub!("_GROUP_", "")
         end
         
-        # ˆø”ƒŠƒXƒg
+        # å¼•æ•°ãƒªã‚¹ãƒˆ
         arg_list = ""
         for i in 0...$param_pars.size
           arg_list += ", " if i != 0
@@ -411,32 +410,32 @@ for filename in $target_files
         end
         func_tmpl.sub!("_PRM_LIST_", arg_list)
         
-        # ˆø”Ú×
+        # å¼•æ•°è©³ç´°
         arg_detail = ""
-        # [in] “™‚É•K—v‚ÈƒXƒy[ƒX—Ìˆæƒ`ƒFƒbƒN
+        # [in] ç­‰ã«å¿…è¦ãªã‚¹ãƒšãƒ¼ã‚¹é ˜åŸŸãƒã‚§ãƒƒã‚¯
         io_space_count = 0
         for param in $param_pars
           io_space_count = param.io_type.length  if param.io_type.length > io_space_count
         end
-        io_space_count += 1 # ƒXƒy[ƒX
-        # –¼‘O‚ÆƒfƒtƒHƒ‹ƒg’l‚ÌƒXƒy[ƒX—Ìˆæƒ`ƒFƒbƒN
+        io_space_count += 1 # ã‚¹ãƒšãƒ¼ã‚¹
+        # åå‰ã¨ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå€¤ã®ã‚¹ãƒšãƒ¼ã‚¹é ˜åŸŸãƒã‚§ãƒƒã‚¯
         name_space_count = 0
         for param in $param_pars
-          t = param.caption.length + 1    # +1 ‚ÍƒXƒy[ƒX‚Ì•ª
-          default_val = $default_arg_hash[param.caption]  # ƒfƒtƒHƒ‹ƒgˆø”
+          t = param.caption.length + 1    # +1 ã¯ã‚¹ãƒšãƒ¼ã‚¹ã®åˆ†
+          default_val = $default_arg_hash[param.caption]  # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
           if default_val != nil
-            t += default_val.length + 2 # +2 ‚Í ()
+            t += default_val.length + 2 # +2 ã¯ ()
           end
           name_space_count = t if t > name_space_count
         end
-        # ˆø”Ú×‚ğì‚é
+        # å¼•æ•°è©³ç´°ã‚’ä½œã‚‹
         for param in $param_pars
           # io type
           t = param.io_type
           snum = io_space_count - t.length
           t += " " * snum if snum > 0
           # name
-          default_val = $default_arg_hash[param.caption]  # ƒfƒtƒHƒ‹ƒgˆø”
+          default_val = $default_arg_hash[param.caption]  # ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆå¼•æ•°
           c = param.caption
           c += "(" + default_val + ")" if default_val != nil
           t += c

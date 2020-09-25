@@ -1,41 +1,40 @@
-#! ruby -EWindows-31J
-# -*- mode:ruby; coding:Windows-31J -*-
+
 #==============================================================================
-# ¡ .as ƒtƒ@ƒCƒ‹‚ğì‚é
-#   ƒIƒvƒVƒ‡ƒ“ˆø”
-#     Eoverride=true
-#         HSP ‘¤‚Å‚Ì’Ç‰Á’è‹`‚ª•K—v‚È‚±‚Æ‚ğ¦‚·B
-#         footer.as ‚ÅAæ“ª‚É '_' ‚ğ•t‚¯‚½–½—ß‚ğ’è‹`‚·‚é‚±‚ÆB
-#           —á) _LAudio_Init
-#         ã‹L–½—ß’è‹`“à‚ÅŠÖ”‚ğg‚¤‚Æ‚«‚Íæ“ª‚É '__' ‚ğ•t‚¯‚é‚±‚ÆB
-#           —á) __LAudio_Init
+# â–  .as ãƒ•ã‚¡ã‚¤ãƒ«ã‚’ä½œã‚‹
+#   ã‚ªãƒ—ã‚·ãƒ§ãƒ³å¼•æ•°
+#     ãƒ»override=true
+#         HSP å´ã§ã®è¿½åŠ å®šç¾©ãŒå¿…è¦ãªã“ã¨ã‚’ç¤ºã™ã€‚
+#         footer.as ã§ã€å…ˆé ­ã« '_' ã‚’ä»˜ã‘ãŸå‘½ä»¤ã‚’å®šç¾©ã™ã‚‹ã“ã¨ã€‚
+#           ä¾‹) _LAudio_Init
+#         ä¸Šè¨˜å‘½ä»¤å®šç¾©å†…ã§é–¢æ•°ã‚’ä½¿ã†ã¨ãã¯å…ˆé ­ã« '__' ã‚’ä»˜ã‘ã‚‹ã“ã¨ã€‚
+#           ä¾‹) __LAudio_Init
 #
-#     Edisable
-#     Ename=newname
+#     ãƒ»disable
+#     ãƒ»name=newname
 #         
 #==============================================================================
 require './Config.rb'
 
-# ƒwƒbƒ_ƒeƒ“ƒvƒŒ[ƒg
+# ãƒ˜ãƒƒãƒ€ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 $header_filepath = "HSPHeaderTemplate/header.as"
 
-# ƒtƒbƒ^ƒeƒ“ƒvƒŒ[ƒg
+# ãƒ•ãƒƒã‚¿ãƒ†ãƒ³ãƒ—ãƒ¬ãƒ¼ãƒˆ
 $footer_filepath = "HSPHeaderTemplate/footer.as"
 
-# Œ^–¼’uŠ·‚Ì‘Î‰•\ (enum “™A‚±‚±‚É‚È‚¢‚à‚Ì‚Í‚·‚×‚Ä int ‚É’u‚«Š·‚¦‚ç‚ê‚é)
+# å‹åç½®æ›ã®å¯¾å¿œè¡¨ (enum ç­‰ã€ã“ã“ã«ãªã„ã‚‚ã®ã¯ã™ã¹ã¦ int ã«ç½®ãæ›ãˆã‚‰ã‚Œã‚‹)
 $replace_type = [
   ["int",       "int"],
   ["float",     "float"],
   ["bool",      "int"],
   ["lnChar*",   "str"],
   ["void*",     "var"],
-  ["LNHandle*", "var"],   # ã‚©‚ç‡‚É include? ‚Å”»’è‚µ‚Ä‚¢‚é‚Ì‚ÅA* ‚Ì‚ ‚é‚à‚Ì‚ğæ‚É‚µ‚Ä‚¨‚­
+  ["LNHandle*", "var"],   # ä¸Šã‹ã‚‰é †ã« include? ã§åˆ¤å®šã—ã¦ã„ã‚‹ã®ã§ã€* ã®ã‚ã‚‹ã‚‚ã®ã‚’å…ˆã«ã—ã¦ãŠã
   ["LNHandle",  "int"],
   ["LNResult",  "int"],
-  ["void",      "void"]   # –ß‚è’l‚ÌŒë”»’è–h~—p
+  ["void",      "void"]   # æˆ»ã‚Šå€¤ã®èª¤åˆ¤å®šé˜²æ­¢ç”¨
 ]
 
-# enum ŒŸõ—pƒtƒ@ƒCƒ‹
+# enum æ¤œç´¢ç”¨ãƒ•ã‚¡ã‚¤ãƒ«
 $const_search_filepash = [
   "LNote/Core/Base/Common.h",
   "LNote/Core/Audio/Interface.h"
@@ -46,18 +45,18 @@ $enum_cand_types = [
   "LNResultCode"
 ]
 
-# ÅIo—Í‘S‘Ì‚É‘Î‚µ‚Äs‚¤•¶š—ñ’uŠ·
+# æœ€çµ‚å‡ºåŠ›å…¨ä½“ã«å¯¾ã—ã¦è¡Œã†æ–‡å­—åˆ—ç½®æ›
 $global_replace_strings = [
   ["\"LConfig_SetUserWindowHandle\" var", "\"LConfig_SetUserWindowHandle\" int"]
 ]
 
 #==============================================================================
-# £ İ’è‚±‚±‚Ü‚Å
+# â–² è¨­å®šã“ã“ã¾ã§
 #==============================================================================
 require './Analyzer.rb'
 
 #------------------------------
-# ‘Sƒtƒ@ƒCƒ‹‰ğÍ
+# å…¨ãƒ•ã‚¡ã‚¤ãƒ«è§£æ
 $analyzer = Analyzer.new
 for filename in $target_files
   p filename
@@ -65,15 +64,15 @@ for filename in $target_files
 end
 
 #------------------------------
-# ƒwƒbƒ_
+# ãƒ˜ãƒƒãƒ€
 file = open($header_filepath)
 $output = file.read
 $output += "\n"
 
 #------------------------------
-# —‚Æ‚µ‚İ
+# è½ã¨ã—è¾¼ã¿
 for doc in $analyzer.func_doc_list
-  # ‘Oˆ—
+  # å‰å‡¦ç†
   continue = false
   func_name = doc.name
   override_str = " _"
@@ -92,12 +91,12 @@ for doc in $analyzer.func_doc_list
   # "#func"
   t = "#func " + override_str + func_name + " " + "\"" + doc.name + "\""
   
-  # ˆø”•”•ª
+  # å¼•æ•°éƒ¨åˆ†
   for i in 0...doc.args.size
     t += " " if i == 0
     t += ", " if i != 0
     
-    # Œ^’uŠ·
+    # å‹ç½®æ›
     ts = doc.args[i].type
     found = false
     for pair in $replace_type
@@ -108,14 +107,14 @@ for doc in $analyzer.func_doc_list
       end
     end
     if found == false
-      $enum_cand_types.push(ts) # enum ‚©‚àH
+      $enum_cand_types.push(ts) # enum ã‹ã‚‚ï¼Ÿ
       ts = "int"
     end
     
     t += ts
   end
   
-  # –ß‚è’l (Œ^’uŠ·ƒŠƒXƒg‚É‚È‚¢‚à‚Ì‚Å‚ ‚ê‚Î enum Œó•â)
+  # æˆ»ã‚Šå€¤ (å‹ç½®æ›ãƒªã‚¹ãƒˆã«ãªã„ã‚‚ã®ã§ã‚ã‚Œã° enum å€™è£œ)
   found = false
   for pair in $replace_type
     if doc.return_type == pair[0]
@@ -128,7 +127,7 @@ for doc in $analyzer.func_doc_list
   # #define
   t += "\n"
   t += "#define " + func_name
-  # ˆø”•”•ª
+  # å¼•æ•°éƒ¨åˆ†
   if doc.args.size > 0
     t += "("
     for i in 0...doc.args.size
@@ -139,9 +138,9 @@ for doc in $analyzer.func_doc_list
     t += ")"
   end
   
-  # –½—ß–¼
+  # å‘½ä»¤å
   t += " _" + func_name
-  # Œã”¼ˆø”•”•ª
+  # å¾ŒåŠå¼•æ•°éƒ¨åˆ†
   if doc.args.size > 0
     t += " "
     for i in 0...doc.args.size
@@ -155,7 +154,7 @@ for doc in $analyzer.func_doc_list
 end
 
 #------------------------------
-# enum ŒŸõ
+# enum æ¤œç´¢
 for filepath in $const_search_filepash
   $analyzer.analyze_enum($lnote_root + filepath, $enum_cand_types)
 end
@@ -165,18 +164,18 @@ for enum in $analyzer.enum_list
 end
 
 #------------------------------
-# ƒOƒ[ƒoƒ‹‚Ì’uŠ·ˆ—
+# ã‚°ãƒ­ãƒ¼ãƒãƒ«ã®ç½®æ›å‡¦ç†
 for pair in $global_replace_strings
   $output.gsub!(pair[0], pair[1])
 end
 
 #------------------------------
-# ƒtƒbƒ^
+# ãƒ•ãƒƒã‚¿
 file = open($footer_filepath)
 $output += file.read
 
 #------------------------------
-# o—Í
+# å‡ºåŠ›
 open(ARGV[0] + "lnote.as", "w") {|f| f.write $output}
 
 p "[finished.]"

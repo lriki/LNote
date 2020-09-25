@@ -1,5 +1,5 @@
-//=============================================================================
-//y LFCommon z
+ï»¿//=============================================================================
+//ã€ LFCommon ã€‘
 //-----------------------------------------------------------------------------
 ///**
 //  @file       LFCommon.h
@@ -23,7 +23,7 @@
     } \
     return LN_OK;
 
-// Create Œn‚È‚ÇA¸”s‚É return 0 ‚·‚éŠÖ”—p
+// Create ç³»ãªã©ã€å¤±æ•—æ™‚ã« return 0 ã™ã‚‹é–¢æ•°ç”¨
 #define LN_FUNC_CALL_RETURN_0(x) \
     try \
     { \
@@ -35,7 +35,7 @@
         return 0; \
     } \
 
-// Create Œn‚È‚ÇA¸”s‚É return 0 ‚·‚éŠÖ”—p
+// Create ç³»ãªã©ã€å¤±æ•—æ™‚ã« return 0 ã™ã‚‹é–¢æ•°ç”¨
 #define LN_FUNC_CALL_RETURN_ENUM(x, default_val) \
     try \
     { \
@@ -47,7 +47,7 @@
         return default_val; \
     } \
 
-// Doxygen ‚©‚ç‚ÌƒvƒŠƒvƒƒZƒbƒT’è‹` (–¼‘O‹óŠÔ‚Ì–³Œø‰»)
+// Doxygen ã‹ã‚‰ã®ãƒ—ãƒªãƒ—ãƒ­ã‚»ãƒƒã‚µå®šç¾© (åå‰ç©ºé–“ã®ç„¡åŠ¹åŒ–)
 #ifdef LNOTE_DISABLE_AT_DOXY_BUILD
     #define LNOTE_FUNC_NAMESPACE_BEGIN
     #define LNOTE_FUNC_NAMESPACE_END
@@ -56,7 +56,7 @@
 #if 0
     /**
         @var typedef int LNRESULT
-        @brief ŠÖ”‚Ìˆ—Œ‹‰Ê‚ğ•\‚·’l‚Å‚·BÚ×‚Í @ref modules_1_error_1_section_1 ‚ğ‚²——‚­‚¾‚³‚¢B
+        @brief é–¢æ•°ã®å‡¦ç†çµæœã‚’è¡¨ã™å€¤ã§ã™ã€‚è©³ç´°ã¯ @ref modules_1_error_1_section_1 ã‚’ã”è¦§ãã ã•ã„ã€‚
     */
     typedef int                 LNRESULT; //
 #endif

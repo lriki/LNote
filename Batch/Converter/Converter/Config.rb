@@ -1,8 +1,8 @@
 
-# ���C�u�����p�b�P�[�W�̃��[�g
+# ライブラリパッケージのルート
 $lnote_root = "../../../"
 
-# �Ώۃt�@�C��
+# 対象ファイル
 $target_files = [
   "LNote/Function/LFAudio.h",
   "LNote/Function/LFFramework.h"

@@ -49,7 +49,7 @@ public:
     /// 3D âπåπÇÃèÓïÒÇÃéÊìæ
     virtual EmitterState* getEmitterState() const = 0;
 
-    LN_REFOBJ_METHODS();
+    LN_REFOBJ_METHODS;
 };
 
 //=============================================================================
@@ -455,7 +455,8 @@ private:
 
 } // namespace XAudio2
 } // namespace Audio
-} // namespace Core
+} // namespace Core
+
 } // namespace LNote
 
 //=============================================================================

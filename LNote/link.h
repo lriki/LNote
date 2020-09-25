@@ -25,17 +25,22 @@
 	#define LNOTE_MSVC_VER_STR "vc2010"
 #endif
 
+// VC2019
+#if ( 1900 <= _MSC_VER ) && ( _MSC_VER < 2000 )
+    #define LNOTE_MSVC_VER_STR "vc2019"
+#endif
+
 // lib ファイルの名前を作る
 #ifdef LNOTE_DEBUG
-    #define LNOTE_DEPEND_LIB_NAME   LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_dependencies_d.lib"
-    #define LNOTE_LIB_NAME 		    LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_static_d.lib"
-    #define LNOTE_DLL_LIB_NAME 		LNOTE_LIB_DIR_T"LNote_d.lib"
-    #define LNOTE_UTILITY_LIB_NAME 	LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_utility_d.lib"
+    #define LNOTE_DEPEND_LIB_NAME   LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_dependencies_d.lib"
+    #define LNOTE_LIB_NAME 		    LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_static_d.lib"
+    #define LNOTE_DLL_LIB_NAME 		LNOTE_LIB_DIR_T "LNote_d.lib"
+    #define LNOTE_UTILITY_LIB_NAME 	LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_utility_d.lib"
 #else
-    #define LNOTE_DEPEND_LIB_NAME   LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_dependencies.lib"
-    #define LNOTE_LIB_NAME 		    LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_static.lib"
-    #define LNOTE_DLL_LIB_NAME 		LNOTE_LIB_DIR_T"LNote.lib"
-    #define LNOTE_UTILITY_LIB_NAME 	LNOTE_LIB_DIR_T"LNote_"LNOTE_MSVC_VER_STR"_utility.lib"
+    #define LNOTE_DEPEND_LIB_NAME   LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_dependencies.lib"
+    #define LNOTE_LIB_NAME 		    LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_static.lib"
+    #define LNOTE_DLL_LIB_NAME 		LNOTE_LIB_DIR_T "LNote.lib"
+    #define LNOTE_UTILITY_LIB_NAME 	LNOTE_LIB_DIR_T "LNote_" LNOTE_MSVC_VER_STR "_utility.lib"
 #endif
 
 
